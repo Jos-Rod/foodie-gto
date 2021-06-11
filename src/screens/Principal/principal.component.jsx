@@ -6,7 +6,11 @@ import especiales from '../../imgs/especiales.jpg';
 import hamburguesas from '../../imgs/hamburguesas.jpeg';
 import losFavoritos from '../../imgs/losFavoritos.jpeg';
 import CirculoComida from '../../components/CirculoComida/CirculoComida.component';
-import { CicrulosComidasListStyled } from './principal.styling';
+import imgPasta from '../../imgs/especialesSemana/pasta.jpg';
+import imgAlitas from '../../imgs/especialesSemana/alitas.jpeg';
+import imgCeviche from '../../imgs/especialesSemana/ceviche.jpg';
+import imgTostada from '../../imgs/especialesSemana/tostada.jpg';
+import { CicrulosComidasListStyled, ImagenEspecialSemana } from './principal.styling';
 
 function Principal() {
 
@@ -17,6 +21,8 @@ function Principal() {
         { title: 'Los favoritos', img: losFavoritos },
         { title: 'Bebidas', img: bebidas },
     ];
+
+    const imagenesEspecialesDeLaSemana = [imgPasta, imgCeviche, imgTostada, imgAlitas];
 
     return (
         <div>
@@ -42,10 +48,10 @@ function Principal() {
                 </div>
             </section>
             {/* Seccion de encuentra lo que necesites */}
-            <section title="Encuentra lo que necesites">
-                <div style={{ marginTop: '60px' }}>
+            <section title="Encuentra lo que necesites" style={{ marginTop: '60px' }}>
+                <div >
                     <div style={{ textAlign: 'center' }}>
-                        <h1 style={{ fontSize: '20pt' }}>Encuentra lo que necesites</h1>
+                        <h1 style={{ fontSize: '25pt' }}>Encuentra lo que necesites</h1>
                     </div>
                     <CicrulosComidasListStyled >
                         {
@@ -54,6 +60,29 @@ function Principal() {
                             })
                         }
                     </CicrulosComidasListStyled>
+                </div>
+            </section>
+            {/* Seccion de Pregunta por los especiales de la semana */}
+            <section title="Encuentra lo que necesites" style={{ marginTop: '60px' }}>
+                <div >
+                    <div style={{ textAlign: 'center' }}>
+                        <h1 style={{ fontSize: '25pt' }}>Encuentra lo que necesites</h1>
+                    </div>
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'center'
+                    }}>
+                        {
+                            imagenesEspecialesDeLaSemana.map(img => {
+                                return (
+                                    <ImagenEspecialSemana img={img} >
+                                        a
+                                    </ImagenEspecialSemana>
+                                )
+                            })
+                        }
+
+                    </div>
                 </div>
             </section>
         </div>

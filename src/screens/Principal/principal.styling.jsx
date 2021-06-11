@@ -7,3 +7,11 @@ export const CicrulosComidasListStyled = styled.div`
     display: flex;
     justify-content: space-around;
 `;
+
+export const ImagenEspecialSemana = styled.div`
+    background-image: url(${props => props.img});
+    background-size: cover;
+    height: 43vh;
+    width: 100%;
+    display: inline-block;
+`;
