@@ -15,7 +15,7 @@ export const ButtonLinkNavbar = styled.div`
     height: 100%;
     display: block;
     align-items: center;
-    min-width: 90px;
+    min-width: 70px;
     text-align: center;
     padding-left: 24px;
     padding-right: 24px;
