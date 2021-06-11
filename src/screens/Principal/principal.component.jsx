@@ -63,10 +63,10 @@ function Principal() {
                 </div>
             </section>
             {/* Seccion de Pregunta por los especiales de la semana */}
-            <section title="Encuentra lo que necesites" style={{ marginTop: '60px' }}>
+            <section title="Pregunta por los especiales de la semana" style={{ marginTop: '60px' }}>
                 <div >
                     <div style={{ textAlign: 'center' }}>
-                        <h1 style={{ fontSize: '25pt' }}>Encuentra lo que necesites</h1>
+                        <h1 style={{ fontSize: '25pt' }}>Pregunta por los especiales de la semana</h1>
                     </div>
                     <div style={{
                         display: 'flex',
