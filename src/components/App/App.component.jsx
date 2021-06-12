@@ -11,12 +11,14 @@ function App() {
 
   return (
     <HashRouter>
-      <ThemeContext.Provider value={ currentTheme } >
+      <ThemeContext.Provider value={currentTheme} >
         <Switch>
-          <Route  exact path="/">
-            <Navbar />
-            <Principal />
-            <Footer />
+          <Route exact path="/">
+            <div style={{ position: 'relative' }}>
+              <Navbar />
+              <Principal />
+              <Footer />
+            </div>
           </Route>
         </Switch>
       </ThemeContext.Provider>
