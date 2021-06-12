@@ -11,6 +11,7 @@ import imgAlitas from '../../imgs/especialesSemana/alitas.jpeg';
 import imgCeviche from '../../imgs/especialesSemana/ceviche.jpg';
 import imgTostada from '../../imgs/especialesSemana/tostada.jpg';
 import { CicrulosComidasListStyled, ImagenEspecialSemana } from './principal.styling';
+import Footer from '../../components/Footer/Footer.component';
 
 function Principal() {
 

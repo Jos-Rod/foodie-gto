@@ -30,6 +30,10 @@ code {
   font-size: 28pt;
 }
 
+.noMargin {
+  margin: '0px';
+}
+
 h1 {
   font-family: 'SpecialElite';
 }

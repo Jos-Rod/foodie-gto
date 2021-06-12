@@ -3,6 +3,7 @@ import { HashRouter, Switch, Route } from 'react-router-dom';
 import ThemeContext, { themes } from '../../providers/Theme/Theme.provider';
 import Principal from '../../screens/Principal/principal.component';
 import Navbar from '../Navbar/Navbar.component';
+import Footer from '../Footer/Footer.component';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route  exact path="/">
             <Navbar />
             <Principal />
+            <Footer />
           </Route>
         </Switch>
       </ThemeContext.Provider>
