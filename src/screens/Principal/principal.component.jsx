@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../imgs/logo.png';
+import portada from '../../imgs/portada.jpeg';
 import desayunosYAlmuerzos from '../../imgs/desayunosYAlmuerzos.jpg';
 import bebidas from '../../imgs/bebidas.jpg';
 import especiales from '../../imgs/especiales.jpg';
@@ -35,12 +36,22 @@ function Principal() {
                         <img src={logo} style={{ maxWidth: "100%", maxHeight: "100%" }} />
                     </div> */}
                     <div style={{
-                        backgroundImage: `url(${logo})`,
-                        backgroundSize: '60%',
+                        backgroundImage: `url(${portada})`,
+                        backgroundSize: '100%',
                         backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'center',
-                        width: '100%', height: '70vh', position: 'relative'
+                        backgroundPosition: 'conain',
+                        width: '100%', height: '90vh', position: 'relative'
                     }}>
+                        <div style={{
+                            backgroundImage: `url(${logo})`,
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center',
+                            backgroundSize: '60%',
+                            position: 'absolute',
+                            height: '100%',
+                            width: '100%',
+                        }}>
+                        </div>
                         <div style={{ position: 'absolute', left: '5%' }}>
                             <h1 className="title" style={{ marginBottom: '0px' }}>¡Bienvenido a FoodieGto!</h1>
                         </div>
