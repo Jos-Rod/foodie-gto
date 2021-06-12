@@ -8,6 +8,10 @@ export const PrincipalNavbarStyled = styled.div`
     justify-content: center;
     padding-left: 40px;
     padding-right: 20px;
+
+    @media screen and (max-width: 800px) {
+        padding-left: 1px;
+    }
 `;
 
 export const ButtonLinkNavbar = styled.div`
@@ -20,4 +24,10 @@ export const ButtonLinkNavbar = styled.div`
     padding-left: 24px;
     padding-right: 24px;
     ${props => props.isSelected ? 'border-left: 2px black solid; border-right: 2px black solid;' : '' };
+    
+    
+    @media screen and (max-width: 800px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 `;

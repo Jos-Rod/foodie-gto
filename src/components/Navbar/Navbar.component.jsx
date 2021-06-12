@@ -19,8 +19,8 @@ const Navbar = () => {
                 {titlesAndLinks.map(header => {
                     return (
                         <ButtonLinkNavbar isSelected={header.isSelected} colorSelected={cremaColor}>
-                            <div style={{ margin: 'auto' }}>
-                                <p>{header.title}</p>
+                            <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                            <p style={{margin: '0px', alignSelf: 'center'}}>{header.title}</p>
                             </div>
                         </ButtonLinkNavbar>)
                 })}
