@@ -11,7 +11,7 @@ import imgPasta from '../../imgs/especialesSemana/pasta.jpg';
 import imgAlitas from '../../imgs/especialesSemana/alitas.jpeg';
 import imgCeviche from '../../imgs/especialesSemana/ceviche.jpg';
 import imgTostada from '../../imgs/especialesSemana/tostada.jpg';
-import { CicrulosComidasListStyled, ImagenEspecialSemana } from './principal.styling';
+import { CicrulosComidasListStyled, ImagenEspecialSemana, ImagenLogoCentro, ImagenPortada } from './principal.styling';
 import Footer from '../../components/Footer/Footer.component';
 
 function Principal() {
@@ -35,28 +35,14 @@ function Principal() {
                     {/* <div style={{ width: '60%', marginLeft: 'auto', marginRight: 'auto' }}>
                         <img src={logo} style={{ maxWidth: "100%", maxHeight: "100%" }} />
                     </div> */}
-                    <div style={{
-                        backgroundImage: `url(${portada})`,
-                        backgroundSize: '100%',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'conain',
-                        width: '100%', height: '90vh', position: 'relative'
-                    }}>
-                        <div style={{
-                            backgroundImage: `url(${logo})`,
-                            backgroundRepeat: 'no-repeat',
-                            backgroundPosition: 'center',
-                            backgroundSize: '60%',
-                            position: 'absolute',
-                            height: '100%',
-                            width: '100%',
-                        }}>
-                        </div>
+                    <ImagenPortada img={portada}>
+                        <ImagenLogoCentro img={logo}>
+                        </ImagenLogoCentro>
                         <div style={{ position: 'absolute', left: '5%' }}>
                             <h1 className="title" style={{ marginBottom: '0px' }}>¡Bienvenido a FoodieGto!</h1>
                         </div>
                         <h1 className="title" style={{ position: 'absolute', bottom: '4px', right: '5%' }}>¿Qué tipo de antojo tienes hoy?</h1>
-                    </div>
+                    </ImagenPortada>
                 </div>
             </section>
             {/* Seccion de encuentra lo que necesites */}
@@ -68,7 +54,7 @@ function Principal() {
                     <CicrulosComidasListStyled >
                         {
                             listaComidaCirculos.map(e => {
-                                return <CirculoComida title={e.title} img={e.img}></CirculoComida>
+                                return e.title != "Especiales" ? <CirculoComida title={e.title} img={e.img}></CirculoComida> : <> <br/> <CirculoComida title={e.title} img={e.img}></CirculoComida> </>
                             })
                         }
                     </CicrulosComidasListStyled>
