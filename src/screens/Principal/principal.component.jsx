@@ -70,9 +70,7 @@ function Principal() {
                         {
                             imagenesEspecialesDeLaSemana.map(img => {
                                 return (
-                                    <ImagenEspecialSemana img={img} >
-                                        a
-                                    </ImagenEspecialSemana>
+                                    <ImagenEspecialSemana img={img} />
                                 )
                             })
                         }
