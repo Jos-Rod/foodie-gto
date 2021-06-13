@@ -11,7 +11,7 @@ import imgPasta from '../../imgs/especialesSemana/pasta.jpg';
 import imgAlitas from '../../imgs/especialesSemana/alitas.jpeg';
 import imgCeviche from '../../imgs/especialesSemana/ceviche.jpg';
 import imgTostada from '../../imgs/especialesSemana/tostada.jpg';
-import { CicrulosComidasListStyled, ImagenEspecialSemana, ImagenLogoCentro, ImagenPortada } from './principal.styling';
+import { CicrulosComidasListStyled, ImagenEspecialSemana, ImagenEspecialSemanaList, ImagenLogoCentro, ImagenPortada } from './principal.styling';
 import Footer from '../../components/Footer/Footer.component';
 
 function Principal() {
@@ -66,10 +66,7 @@ function Principal() {
                     <div style={{ textAlign: 'center' }}>
                         <h1 style={{ fontSize: '25pt' }}>Pregunta por los especiales de la semana</h1>
                     </div>
-                    <div style={{
-                        display: 'flex',
-                        justifyContent: 'center'
-                    }}>
+                    <ImagenEspecialSemanaList>
                         {
                             imagenesEspecialesDeLaSemana.map(img => {
                                 return (
@@ -80,7 +77,7 @@ function Principal() {
                             })
                         }
 
-                    </div>
+                    </ImagenEspecialSemanaList>
                 </div>
             </section>
         </div>

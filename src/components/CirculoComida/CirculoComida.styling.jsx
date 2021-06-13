@@ -7,7 +7,7 @@ export const CirculoComidaStyled = styled.div`
     display: inline-block;
     padding: 10px;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 768px) {
         width: 25%;
         max-width: 1000px;
     }
