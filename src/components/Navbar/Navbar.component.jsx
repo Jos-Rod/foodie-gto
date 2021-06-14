@@ -17,7 +17,7 @@ const Navbar = ({ titlesAndLinks }) => {
             <PrincipalNavbarStyled>
                 {titlesAndLinks.map(header => {
                     return (
-                        <Link to={header.linkTo} key={header.linkTo}>
+                        <Link to={header.linkTo} key={header.linkTo} style={{ textDecoration: 'none', color: 'inherit' }}>
                             <ButtonLinkNavbar isSelected={header.isSelected} colorSelected={cremaColor}  >
                                 <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                     <p style={{ margin: '0px', alignSelf: 'center' }}>{header.title}</p>

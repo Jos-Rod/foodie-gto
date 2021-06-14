@@ -4,6 +4,7 @@ import ThemeContext, { themes } from '../../providers/Theme/Theme.provider';
 import Principal from '../../screens/Principal/principal.component';
 import Navbar from '../Navbar/Navbar.component';
 import Footer from '../Footer/Footer.component';
+import Menu from '../../screens/Menu/Menu.component';
 
 var titlesAndLinks = [
   { title: "Home", linkTo: "/", isSelected: true }, 
@@ -31,6 +32,7 @@ function App() {
           </Route>
           <Route exact path="/menu">
             <div style={{ position: 'relative' }}>
+              <Menu />
               <Footer />
             </div>
           </Route>

@@ -20,8 +20,8 @@ export const ImageCircleSyled = styled.div`
     background-position: center;
     margin-right: auto;
     margin-left: auto;
+    width: 100%;
     padding-bottom: 100%;
     height: 0;
-    width: 100%;
     border-radius: 50%;
 `;
