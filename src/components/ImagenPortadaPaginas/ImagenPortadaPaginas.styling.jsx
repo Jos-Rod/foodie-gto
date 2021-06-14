@@ -100,3 +100,26 @@ export const ContenedorImagenTorta = styled.div`
 export const ContenedorDetalleTortas = styled.div`
     width: 50%;
 `;
+
+export const ContenedorTortasLista = styled.div`
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20%;
+`;
+
+export const DescripcionTortaPrecio = styled.p`
+    text-align: center;
+    display: block;
+    margin: 0px;
+`;
+
+export const TablaTorta = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0px;
+    width: 100%;
+`;
