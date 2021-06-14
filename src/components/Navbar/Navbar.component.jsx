@@ -1,16 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import ThemeContext from '../../providers/Theme/Theme.provider';
 import { PrincipalNavbarStyled, ButtonLinkNavbar } from './Navbar.styling';
 import logo from '../../imgs/logo.png';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ titlesAndLinks }) => {
 
     const { cremaColor } = useContext(ThemeContext);
 
-    console.log("theme");
-    console.log(cremaColor);
-
-    const titlesAndLinks = [{ title: "Home", isSelected: true }, { title: "Menú diario" }, { title: "Los favoritos" }, { title: "Bebidas" }, { title: "Acerca de Foodie" }, { title: "Contacto" }];
+    console.log("WOW");
+    console.log(titlesAndLinks);
 
     return (
         <div>
@@ -18,14 +17,17 @@ const Navbar = () => {
             <PrincipalNavbarStyled>
                 {titlesAndLinks.map(header => {
                     return (
-                        <ButtonLinkNavbar isSelected={header.isSelected} colorSelected={cremaColor}>
-                            <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                            <p style={{margin: '0px', alignSelf: 'center'}}>{header.title}</p>
-                            </div>
-                        </ButtonLinkNavbar>)
+                        <Link to={header.linkTo} key={header.linkTo}>
+                            <ButtonLinkNavbar isSelected={header.isSelected} colorSelected={cremaColor}  >
+                                <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                    <p style={{ margin: '0px', alignSelf: 'center' }}>{header.title}</p>
+                                </div>
+                            </ButtonLinkNavbar>
+                        </Link>
+                    )
                 })}
                 <ButtonLinkNavbar style={{ marginTop: 'auto', marginBottom: 'auto', display: 'block', height: '70%', maxWidth: '140px' }}>
-                    <img src={logo} style={{maxWidth: '100%', maxHeight: '100%'}} />
+                    <img src={logo} style={{ maxWidth: '100%', maxHeight: '100%' }} />
                 </ButtonLinkNavbar>
             </PrincipalNavbarStyled>
         </div>
