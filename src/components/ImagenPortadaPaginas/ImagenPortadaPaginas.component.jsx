@@ -69,8 +69,8 @@ const ImagenPortadaPaginas = () => {
                 <ContenedorImagenTorta img={imagenTorta}></ContenedorImagenTorta>
                 <ContenedorDetalleTortas>
                     <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                        <h1 style={{textAlign: 'center'}}>¡Qué tortas!</h1>
-                        <div style={{ height: '50%', backgroundColor: 'black', marginBottom: '20%' }}>
+                        <h1 className="title" style={{textAlign: 'center'}}>¡Qué tortas!</h1>
+                        <div style={{ height: '50%', backgroundColor: 'black', }}>
                                 
                         </div>
                     </div>
