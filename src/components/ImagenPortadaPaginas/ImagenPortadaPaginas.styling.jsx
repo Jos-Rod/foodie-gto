@@ -80,3 +80,16 @@ export const DescripcionDesayunoPrecio = styled.p`
     display: block;
     margin: 0px;
 `;
+
+export const DetalleTorta = styled.div`
+    height: 70vh;
+`;
+
+export const ContenedorImagenTorta = styled.div`
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(${props => props.img});
+    width: 50%;
+    height: 0;
+    padding-bottom: 100%;
+`;

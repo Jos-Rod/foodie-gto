@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import imagenPortada from '../../imgs/bread.jpg';
 import imagenDesayunos from '../../imgs/desayunoCuadrado.jpg';
+import imagenTorta from '../../imgs/torta.jpg';
 import ThemeContext from '../../providers/Theme/Theme.provider';
-import { ImagenPortadaStyled, TablaDesayunos, DetalleAlmuerzos, ContainerDesayunosLista, DescripcionDesayunoPrecio, CuadroBlanco, DescripcionDesayuno, ContenedorImagen, TituloDesayuno, ImagenDesayuno } from './ImagenPortadaPaginas.styling';
+import { ImagenPortadaStyled, TablaDesayunos, DetalleTorta, DetalleAlmuerzos, ContenedorImagenTorta, ContainerDesayunosLista, DescripcionDesayunoPrecio, CuadroBlanco, DescripcionDesayuno, ContenedorImagen, TituloDesayuno, ImagenDesayuno } from './ImagenPortadaPaginas.styling';
 
 
 const desayunosAlmuerzosLabel = [
@@ -63,7 +64,10 @@ const ImagenPortadaPaginas = () => {
 
                 </div>
             </DetalleAlmuerzos>
-            <div style={{ height: '300px' }}>a</div>
+            <div style={{ height: '100px' }}>a</div>
+            <DetalleTorta>
+                <ContenedorImagenTorta img={imagenTorta}></ContenedorImagenTorta>
+            </DetalleTorta>
         </>
     );
 };
