@@ -3,7 +3,7 @@ import imagenPortada from '../../imgs/bread.jpg';
 import imagenDesayunos from '../../imgs/desayunoCuadrado.jpg';
 import imagenTorta from '../../imgs/torta.jpg';
 import ThemeContext from '../../providers/Theme/Theme.provider';
-import { ImagenPortadaStyled, TablaDesayunos, DetalleTorta, DetalleAlmuerzos, ContenedorImagenTorta, ContainerDesayunosLista, DescripcionDesayunoPrecio, CuadroBlanco, DescripcionDesayuno, ContenedorImagen, TituloDesayuno, ImagenDesayuno } from './ImagenPortadaPaginas.styling';
+import { ImagenPortadaStyled, TablaDesayunos, DetalleTorta, ContenedorDetalleTortas, DetalleAlmuerzos, ContenedorImagenTorta, ContainerDesayunosLista, DescripcionDesayunoPrecio, CuadroBlanco, DescripcionDesayuno, ContenedorImagen, TituloDesayuno, ImagenDesayuno } from './ImagenPortadaPaginas.styling';
 
 
 const desayunosAlmuerzosLabel = [
@@ -64,9 +64,17 @@ const ImagenPortadaPaginas = () => {
 
                 </div>
             </DetalleAlmuerzos>
-            <div style={{ height: '100px' }}>a</div>
+            <div style={{ height: '100px' }}></div>
             <DetalleTorta>
                 <ContenedorImagenTorta img={imagenTorta}></ContenedorImagenTorta>
+                <ContenedorDetalleTortas>
+                    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                        <h1 style={{textAlign: 'center'}}>¡Qué tortas!</h1>
+                        <div style={{ height: '50%', backgroundColor: 'black', marginBottom: '20%' }}>
+                                
+                        </div>
+                    </div>
+                </ContenedorDetalleTortas>
             </DetalleTorta>
         </>
     );

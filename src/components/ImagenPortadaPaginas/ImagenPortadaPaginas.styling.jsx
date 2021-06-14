@@ -83,6 +83,8 @@ export const DescripcionDesayunoPrecio = styled.p`
 
 export const DetalleTorta = styled.div`
     height: 70vh;
+    display: flex;
+    overflow: hidden;
 `;
 
 export const ContenedorImagenTorta = styled.div`
@@ -92,4 +94,9 @@ export const ContenedorImagenTorta = styled.div`
     width: 50%;
     height: 0;
     padding-bottom: 100%;
+    margin-right: 0px;
+`;
+
+export const ContenedorDetalleTortas = styled.div`
+    width: 50%;
 `;
