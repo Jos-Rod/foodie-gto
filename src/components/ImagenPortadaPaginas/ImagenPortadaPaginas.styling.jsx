@@ -11,10 +11,10 @@ export const ImagenPortadaStyled = styled.div`
 
 export const DetalleAlmuerzos = styled.div`
     background-color: ${props => props.color};
-    height: 70vh;
+    height: 60vh;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    padding-top: 25vh;
+    padding-top: 15vh;
 `;
 
 export const DescripcionDesayuno = styled.div`
@@ -57,22 +57,21 @@ export const CuadroBlanco = styled.div`
 `;
 
 export const ContainerDesayunosLista = styled.div`
-    text-align: left;
     margin-left: 40px;
-    position: absolute;
-    width: 70%;
+    width: 60%;
     height: 80%;
-    display: flex;
+    display: grid;
     flex-direction: column;
+    align-items: center;
+    align-content: center;
 `;
 
 export const TablaDesayunos = styled.div`
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
     margin: 0px;
     width: 100%;
-    flex: 1;
 `;
 
 export const DescripcionDesayunoPrecio = styled.p`
@@ -105,9 +104,11 @@ export const ContenedorTortasLista = styled.div`
     text-align: center;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: grid;
     flex-direction: column;
     padding-right: 20%;
+    align-items: center;
+    align-content: center;
 `;
 
 export const DescripcionTortaPrecio = styled.p`

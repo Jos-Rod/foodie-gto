@@ -9,9 +9,9 @@ import { ImagenPortadaStyled, TablaDesayunos, TablaTorta, DetalleTorta, Descripc
 const desayunosAlmuerzosLabel = [
     { title: 'Cuatro hotcakes con maple', precio: '$45' },
     { title: 'Cuatro hotcakes con fruta', precio: '$60' },
-    { title: <span><span style={{ color: 'purple' }}>Básico</span> (2 huevos, 2 hotcakes y tocino)</span>, precio: '$50' },
-    { title: <span><span style={{ color: 'green' }}>Americano</span> (2 huevos, tocino, papa rallada)</span>, precio: '$65' },
-    { title: <span><span style={{ color: 'red' }}>Completo</span> (2 huevos, frijoles, pan, una proteína (arrachera, prensado o chorizo))</span>, precio: '$70' },
+    { title: <span><span style={{ color: 'purple' }}>Básico</span> (2 huevos, 2 hotcakes y <br/> tocino)</span>, precio: '$50' },
+    { title: <span><span style={{ color: 'green' }}>Americano</span> (2 huevos, tocino, <br/> papa rallada)</span>, precio: '$65' },
+    { title: <span><span style={{ color: 'red' }}>Completo</span> (2 huevos, frijoles, pan, <br/> una proteína (arrachera, prensado <br/> o chorizo))</span>, precio: '$70' },
     { title: 'Hot cake por piezas', precio: '$17' },
 ]
 
@@ -74,7 +74,7 @@ const ImagenPortadaPaginas = () => {
                 <ContenedorDetalleTortas>
                     <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <h1 className="title" style={{ textAlign: 'center' }}>¡Qué tortas!</h1>
-                        <div style={{ backgroundColor: 'black', paddingRight: '20%', paddingLeft: '20%', paddingTop: '15%', paddingBottom: '15%' }}>
+                        <div style={{ backgroundColor: 'black', paddingRight: '20%', paddingLeft: '20%', height: '50%',}}>
                             <ContenedorTortasLista style={{ textAlign: 'center', color: 'white'}}>
                                 {
                                     tortasLabels.map(e => {
