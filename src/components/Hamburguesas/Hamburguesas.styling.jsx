@@ -32,3 +32,38 @@ export const CirculoHamburguesaImagen = styled.div`
     padding-bottom: 100%;
     border-radius: 50%;
 `;
+
+export const ContenedorDeTemporada = styled.div`
+    height: 60vh;
+    display: flex;
+    margin-top: 40px;
+`;
+
+export const ContenedorDeTemporadaDescripcion = styled.div`
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`;
+
+export const ContenedorNegro = styled.div`
+    height: 60%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+`;
+
+export const ContenedorImagenDeTemporada = styled.div`
+    background-image: url(${props => props.img});
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 40%;
+    display: block;
+`;
