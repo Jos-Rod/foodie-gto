@@ -3,11 +3,11 @@ import imagenPortadaHamburguesa from '../../imgs/hamburguesas.jpeg';
 import ThemeContext from '../../providers/Theme/Theme.provider';
 import { ImagenPortadaStyled } from './ImagenPortadaPaginas.styling';
 
-const ImagenPortadaPaginas = ({img, title}) => {
+const ImagenPortadaPaginas = ({img, title, centered = true}) => {
 
     return (
         <>
-            <ImagenPortadaStyled img={img}>
+            <ImagenPortadaStyled img={img} centered={centered}>
                 <h1 style={{textAlign: 'center', fontSize: '40pt', color: 'white'}}>{title}</h1>
             </ImagenPortadaStyled>
         </>

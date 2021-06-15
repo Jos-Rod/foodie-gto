@@ -5,6 +5,7 @@ import Principal from '../../screens/Principal/principal.component';
 import Navbar from '../Navbar/Navbar.component';
 import Footer from '../Footer/Footer.component';
 import Menu from '../../screens/Menu/Menu.component';
+import LosFavoritos from '../../screens/LosFavoritos/LosFavoritos.component';
 
 var titlesAndLinks = [
   { title: "Home", linkTo: "/", isSelected: true }, 
@@ -33,6 +34,12 @@ function App() {
           <Route exact path="/menu">
             <div style={{ position: 'relative' }}>
               <Menu />
+              <Footer />
+            </div>
+          </Route>
+          <Route exact path="/favoritos">
+            <div style={{ position: 'relative' }}>
+              <LosFavoritos />
               <Footer />
             </div>
           </Route>
