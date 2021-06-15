@@ -1,6 +1,9 @@
 import React from 'react';
-import { ListaHamburguesasEspeciales, ListaHamburguesasBasicas } from './Hamburguesas.styling';
+import { ListaHamburguesasEspeciales, ListaHamburguesasBasicas, CirculoHamburguesa, CirculoHamburguesaImagen } from './Hamburguesas.styling';
 import ContenedorListaConPrecio from '../ContenedorListaConPrecio/ContenedorListaConPrecio.component';
+import hamburguesaCentro from '../../imgs/hamburguesaCentro.jpeg';
+import hamburguesaChickenSupreme from '../../imgs/hamburguesaChickenSupreme.jpeg';
+import hamburguesaSupreme from '../../imgs/hamburguesaSuprema.jpeg';
 
 const listaHamburguesasEspeciales = [
     { title: 'Hamburguesa master (sirloin, costra de queso, tocino', precio: '$65' },
@@ -26,6 +29,33 @@ const Hamburguesas = () => {
                     <h3 className="fontFSpecialElite" style={{ textAlign: 'center' }}>Hamburgueas básicas</h3>
                     <ContenedorListaConPrecio lista={listaHamburguesasBasicas} />
                 </ListaHamburguesasBasicas>
+            </div>
+            {/* Cual elegirias? */}
+            <div style={{ backgroundColor: 'beige', height: '30vh', marginTop: '150px', display: 'flex', justifyContent: 'center' }}>
+                <CirculoHamburguesa>
+                    <div style={{ height: '10vh', display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>
+                        <h2 className="fontFSpecialElite" style={{ textAlign: 'center' }}>Chicken supreme</h2>
+                    </div>
+                    <div style={{ width: '65%', marginLeft: 'auto', marginRight: 'auto' }}>
+                        <CirculoHamburguesaImagen img={hamburguesaChickenSupreme} />
+                    </div>
+                </CirculoHamburguesa>
+                <CirculoHamburguesa>
+                    <div style={{ height: '10vh', display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
+                        <h1 className="fontFSpecialElite" style={{ textAlign: 'center' }}>¿Cuál elegirías?</h1>
+                    </div>
+                    <div style={{ width: '65%', marginLeft: 'auto', marginRight: 'auto' }}>
+                        <CirculoHamburguesaImagen img={hamburguesaCentro} />
+                    </div>
+                </CirculoHamburguesa>
+                <CirculoHamburguesa>
+                    <div style={{ height: '10vh', display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>
+                        <h2 className="fontFSpecialElite" style={{ textAlign: 'center' }}>La suprema</h2>
+                    </div>
+                    <div style={{ width: '65%', marginLeft: 'auto', marginRight: 'auto' }}>
+                        <CirculoHamburguesaImagen img={hamburguesaSupreme} />
+                    </div>
+                </CirculoHamburguesa>
             </div>
             <div style={{ height: '20vh' }}>d</div>
         </>
