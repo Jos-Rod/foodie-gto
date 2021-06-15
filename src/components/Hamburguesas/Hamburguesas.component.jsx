@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListaHamburguesasEspeciales, ContainerHamburguesas, ContenedorImagenHamburguesa, ContenedorDeTemporada, ContenedorImagenDeTemporada, ContenedorNegro, ContenedorDeTemporadaDescripcion, ListaHamburguesasBasicas, CirculoHamburguesa, CirculoHamburguesaImagen } from './Hamburguesas.styling';
+import { ListaHamburguesasEspeciales, ContainerHamburguesas, DescripcionTemporadaP, ContenedorImagenHamburguesa, ContenedorDeTemporada, ContenedorImagenDeTemporada, ContenedorNegro, ContenedorDeTemporadaDescripcion, ListaHamburguesasBasicas, CirculoHamburguesa, CirculoHamburguesaImagen } from './Hamburguesas.styling';
 import ContenedorListaConPrecio from '../ContenedorListaConPrecio/ContenedorListaConPrecio.component';
 import hamburguesaCentro from '../../imgs/hamburguesaCentro.jpeg';
 import hamburguesaChickenSupreme from '../../imgs/hamburguesaChickenSupreme.jpeg';
@@ -63,10 +63,10 @@ const Hamburguesas = () => {
                 <ContenedorDeTemporadaDescripcion>
                     <ContenedorNegro>
                         <h1 style={{ paddingLeft: '20%', width: '100%' }}>De temporada...</h1>
-                        <h2 className="fontFSpecialElite" style={{ paddingLeft: '10%', textAlign: 'center', width: '100%' }}>No te pierdas las Hamburguesas 
+                        <DescripcionTemporadaP className="fontFSpecialElite">No te pierdas las Hamburguesas 
                             <br/> que preparamos en cada festividad 
                             <br/>¡Preparadas con ingredientes o 
-                            <br/> temáticas diferentes!</h2>
+                            <br/> temáticas diferentes!</DescripcionTemporadaP>
                     </ContenedorNegro>
                 </ContenedorDeTemporadaDescripcion>
                 <ContenedorImagenDeTemporada img={imagenTemporada}>

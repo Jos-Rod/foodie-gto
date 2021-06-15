@@ -59,7 +59,7 @@ export const CirculoHamburguesaImagen = styled.div`
 `;
 
 export const ContenedorDeTemporada = styled.div`
-    height: 60vh;
+    height: 40vh;
     display: flex;
     margin-top: 40px;
 `;
@@ -101,5 +101,15 @@ export const ContenedorImagenHamburguesa = styled.div`
 
     @media screen and (max-width: 768px) {
         width: 85%;
+    }
+`;
+
+export const DescripcionTemporadaP = styled.h2`
+    width: 100%;
+    text-align: center;
+    padding-left: 10%;
+
+    @media screen and (max-width: 768px) {
+        font-size: 15pt;
     }
 `;
