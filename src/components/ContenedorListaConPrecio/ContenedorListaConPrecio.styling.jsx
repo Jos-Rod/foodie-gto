@@ -23,4 +23,8 @@ export const ElementoListaConPrecio = styled.p`
     display: block;
     margin: 0px;
     margin-top: 20px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 11pt;
+    }
 `;

@@ -6,6 +6,11 @@ export const DetalleAlmuerzos = styled.div`
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     padding-top: 15vh;
+
+    @media screen and (max-width: 768px) {
+        height: 45vh;
+        padding-top: 5vh;
+    }
 `;
 
 export const DescripcionDesayuno = styled.div`
@@ -18,6 +23,10 @@ export const DescripcionDesayuno = styled.div`
 export const TituloDesayuno = styled.h1`
     text-align: center;
     font-size: 30pt;
+    
+    @media screen and (max-width: 768px) {
+        margin: 0px;
+    }
 `;
 
 export const ContenedorImagen = styled.div`
@@ -31,20 +40,23 @@ export const ImagenDesayuno = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
-    height: 94%;
+    height: 100%;
     /* margin-top: -30px; */
-    position: absolute;
-    bottom: 40px;
+    /* position: absolute; */
 `;
 
 export const CuadroBlanco = styled.div`
     background-color: white;
     margin-left: 40px;
-    padding: 20px;
+    /* padding: 20px; */
     position: absolute;
     bottom: 40px;
-    top: 130px;
+    top: 150px;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+        top: 120px;
+    }
 `;
 
 export const ContainerDesayunosLista = styled.div`
@@ -69,10 +81,14 @@ export const DescripcionDesayunoPrecio = styled.p`
     text-align: left;
     display: block;
     margin: 0px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 11pt;
+    }
 `;
 
 export const DetalleTorta = styled.div`
-    height: 70vh;
+    height: 35vh;
     display: flex;
     overflow: hidden;
 `;
@@ -85,6 +101,17 @@ export const ContenedorImagenTorta = styled.div`
     height: 0;
     padding-bottom: 100%;
     margin-right: 0px;
+`;
+
+export const ContenedorNegro = styled.div`
+    background-color: black;
+    padding-right: 20%;
+    padding-left: 20%;
+    height: 50%;
+
+    @media screen and (max-width: 768px) {
+        height: 65%;
+    }
 `;
 
 export const ContenedorDetalleTortas = styled.div`

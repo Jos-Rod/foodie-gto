@@ -10,4 +10,8 @@ export const ImagenPortadaStyled = styled.div`
     display: grid;
     align-items: center;
     justify-items: center;
+
+    @media screen and (max-width: 768px) {
+        height: 20vh;
+    }
 `;

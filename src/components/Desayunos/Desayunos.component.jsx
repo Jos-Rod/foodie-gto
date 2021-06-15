@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import imagenDesayunos from '../../imgs/desayunoCuadrado.jpg';
 import imagenTorta from '../../imgs/torta.jpg';
 import ThemeContext from '../../providers/Theme/Theme.provider';
-import {TablaDesayunos, TablaTorta, DetalleTorta, DescripcionTortaPrecio, ContenedorTortasLista, ContenedorDetalleTortas, DetalleAlmuerzos, ContenedorImagenTorta, ContainerDesayunosLista, DescripcionDesayunoPrecio, CuadroBlanco, DescripcionDesayuno, ContenedorImagen, TituloDesayuno, ImagenDesayuno } from './Desayunos.styling';
+import {TablaDesayunos, TablaTorta, DetalleTorta, ContenedorNegro, DescripcionTortaPrecio, ContenedorTortasLista, ContenedorDetalleTortas, DetalleAlmuerzos, ContenedorImagenTorta, ContainerDesayunosLista, DescripcionDesayunoPrecio, CuadroBlanco, DescripcionDesayuno, ContenedorImagen, TituloDesayuno, ImagenDesayuno } from './Desayunos.styling';
 
 const desayunosAlmuerzosLabel = [
     { title: 'Cuatro hotcakes con maple', precio: '$45' },
@@ -42,7 +42,7 @@ const Desayunos = () => {
                                 width: '70%',
                                 height: '100%'
                             }}>
-                                <p className="fontFSpecialElite" style={{ textAlign: 'left' }}>Desayunos</p>
+                                <p className="fontFSpecialElite" style={{ textAlign: 'left', marginLeft: '5%', marginTop: '10%' }}>Desayunos</p>
                                 <ContainerDesayunosLista style={{ textAlign: 'left', marginLeft: '40px', position: 'absolute', top: '60px', bottom: '' }}>
                                     {
                                         desayunosAlmuerzosLabel.map(e => {
@@ -59,7 +59,9 @@ const Desayunos = () => {
                         </CuadroBlanco>
                     </DescripcionDesayuno>
                     <ContenedorImagen>
-                        <ImagenDesayuno img={imagenDesayunos} />
+                        <div style={{ width: '90%', height: '100%', marginRight: 'auto', marginLeft: 'auto' }}>
+                            <ImagenDesayuno img={imagenDesayunos} />
+                        </div>
                     </ContenedorImagen>
 
                 </div>
@@ -70,7 +72,7 @@ const Desayunos = () => {
                 <ContenedorDetalleTortas>
                     <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <h1 className="title" style={{ textAlign: 'center' }}>¡Qué tortas!</h1>
-                        <div style={{ backgroundColor: 'black', paddingRight: '20%', paddingLeft: '20%', height: '50%', }}>
+                        <ContenedorNegro>
                             <ContenedorTortasLista style={{ textAlign: 'center', color: 'white' }}>
                                 {
                                     tortasLabels.map(e => {
@@ -85,7 +87,7 @@ const Desayunos = () => {
                                 <DescripcionTortaPrecio style={{ marginTop: '25px' }} className="fontFSpecialElite">Todas incluyen: mayonesa, aderezo <br /> picoso, lechuga, jitomate y aguacate</DescripcionTortaPrecio>
                             </ContenedorTortasLista>
 
-                        </div>
+                        </ContenedorNegro>
                     </div>
                 </ContenedorDetalleTortas>
             </DetalleTorta> 

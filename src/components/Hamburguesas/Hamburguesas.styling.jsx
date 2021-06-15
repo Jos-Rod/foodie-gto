@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 
+export const ContainerHamburguesas = styled.div`
+    display: flex;
+    height: 30vh;
+    margin-top: 20px;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+        width: 100%;
+    }
+`;
+
 export const ListaHamburguesasEspeciales = styled.div`
     width: 50%;
     align-items: flex-start;
@@ -7,6 +18,13 @@ export const ListaHamburguesasEspeciales = styled.div`
     display: grid;
     padding-left: 5%;
     padding-right: 5%;
+
+    @media screen and (max-width: 768px) {
+        width: 80%;
+        padding: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 `;
 
 export const ListaHamburguesasBasicas = styled.div`
@@ -16,6 +34,13 @@ export const ListaHamburguesasBasicas = styled.div`
     display: grid;
     padding-left: 5%;
     padding-right: 5%;
+
+    @media screen and (max-width: 768px) {
+        width: 80%;
+        padding: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 `;
 
 export const CirculoHamburguesa = styled.div`
@@ -66,4 +91,15 @@ export const ContenedorImagenDeTemporada = styled.div`
     height: 100%;
     width: 40%;
     display: block;
+    
+`;
+
+export const ContenedorImagenHamburguesa = styled.div`
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 768px) {
+        width: 85%;
+    }
 `;
