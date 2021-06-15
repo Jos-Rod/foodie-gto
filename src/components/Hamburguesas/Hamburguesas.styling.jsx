@@ -59,9 +59,13 @@ export const CirculoHamburguesaImagen = styled.div`
 `;
 
 export const ContenedorDeTemporada = styled.div`
-    height: 40vh;
+    height: 60vh;
     display: flex;
     margin-top: 40px;
+
+    @media screen and (max-width: 768px) {
+        height: 40vh;
+    }
 `;
 
 export const ContenedorDeTemporadaDescripcion = styled.div`
@@ -91,7 +95,7 @@ export const ContenedorImagenDeTemporada = styled.div`
     height: 100%;
     width: 40%;
     display: block;
-    
+    background-position: center;
 `;
 
 export const ContenedorImagenHamburguesa = styled.div`

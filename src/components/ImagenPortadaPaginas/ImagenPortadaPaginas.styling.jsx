@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ImagenPortadaStyled = styled.div`
     background-image: url(${props => props.img});
-    height: 40vh;
+    height: 30vh;
     background-position: center;
     margin-top: 23px;
     background-size: 100%;
