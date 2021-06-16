@@ -35,6 +35,10 @@ code {
   font-size: 28pt;
 }
 
+.centered {
+  text-align: center;
+}
+
 .noMargin {
   margin: '0px';
 }

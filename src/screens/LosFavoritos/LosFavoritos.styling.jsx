@@ -22,11 +22,48 @@ export const ContenedorFavoritos = styled.div`
 
 export const ContenedorImagen = styled.div`
     width: 45%;
-    background-color: cadetblue;
     background-image: url(${props => props.img});
     background-size: cover;
 `;
 
 export const ContenedorListaFavoritos = styled.div`
     width: 70%;
+`;
+
+export const ContenedorSalsas = styled.div`
+    margin-top: 40px;
+    height: 70vh;
+
+    @media screen and (min-width: 1500px) {
+        height: 20vh;
+        min-height: 850px;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 60vh;
+        min-height: 600px;
+    }
+`;
+
+export const CirculoSalsa = styled.div`
+    border: ${props => props.color} 9px solid;
+    border-radius: 50%;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'SpecialElite';
+`;
+
+export const DescripcionSalsa = styled.p`
+    font-size: 20pt;
+`;
+
+export const CirculosDesktop = styled.div`
+    height: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
 `;

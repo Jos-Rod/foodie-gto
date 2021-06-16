@@ -9,7 +9,7 @@ const Footer = () => {
 
     return (
         <>
-            <footer style={{ position: 'absolute', bottom: '-1vh', right: '0px', left: '0px', marginBottom: '-14vh', width: '100$' }}>
+            <footer style={{ position: 'absolute', bottom: '-1vh', right: '0px', left: '0px', minHeight: '133px', marginBottom: '-14vh', width: '100$' }}>
                 <PrincipalFooterStyled color={cremaColor}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', height: '100%' }}>
                         {/* Logo */}

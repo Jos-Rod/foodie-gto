@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import imagenBoneless from '../../imgs/boneless.jpg';
 import imagenLosFavoritos from '../../imgs/losFavoritos.jpeg';
 import ImagenPortadaPaginas from '../../components/ImagenPortadaPaginas/ImagenPortadaPaginas.component';
-import { TituloSnacks, ContenedorImagen, ContenedorListaFavoritos, ContenedorFavoritos, ContenedorFavoritosEImagen } from './LosFavoritos.styling';
+import { TituloSnacks, ContenedorImagen, ContenedorSalsas, CirculosDesktop, DescripcionSalsa, CirculoSalsa, ContenedorListaFavoritos, ContenedorFavoritos, ContenedorFavoritosEImagen } from './LosFavoritos.styling';
 import ContenedorListaConPrecio from '../../components/ContenedorListaConPrecio/ContenedorListaConPrecio.component';
+// import './auxJS';
 
 const primeraListaBoneless = [
     { title: 'Boneless 350', precio: '$50' },
@@ -20,6 +21,19 @@ const listaPapasGajo = [
 ];
 
 const LosFavoritos = () => {
+
+    useEffect(() => {
+        function handleResize() {
+            const lista = document.querySelectorAll(".CirculoSalsa");
+            lista.forEach(e => {
+                console.log("ASF");
+                e.setAttribute("style", `height:${e.clientWidth}px`);
+            });
+        }
+
+        window.addEventListener('resize', handleResize);
+    });
+
     return (
         <>
             <ImagenPortadaPaginas img={imagenBoneless} title='Boneless' centered={false} />
@@ -36,7 +50,7 @@ const LosFavoritos = () => {
                     <ContenedorListaFavoritos style={{ marginTop: '25px' }}>
                         <ContenedorListaConPrecio lista={listaPapasSupremas} />
                     </ContenedorListaFavoritos>
-                    
+
                     <ContenedorListaFavoritos style={{ marginTop: '25px' }}>
                         <ContenedorListaConPrecio lista={listaPapasGajo} />
                     </ContenedorListaFavoritos>
@@ -44,7 +58,44 @@ const LosFavoritos = () => {
                 <ContenedorImagen img={imagenLosFavoritos} />
             </ContenedorFavoritosEImagen>
 
-            <div style={{ height: '20vh' }}></div>
+            <ContenedorSalsas>
+                <h1 className="title centered">Puedes elegir la salsa de tu preferencia</h1>
+                <CirculosDesktop>
+                    <div style={{ width: '20%' }}>
+                        <CirculoSalsa className="CirculoSalsa" color='#D40029'>
+                            <DescripcionSalsa>Buffalo</DescripcionSalsa>
+                        </CirculoSalsa>
+                    </div>
+                    <div style={{ display: 'flex', width: '20%', height: '100%', justifyContent: 'space-between', flexDirection: 'column' }}>
+                        <CirculoSalsa className="CirculoSalsa" color='#E97600' >
+                            <DescripcionSalsa>BB Habanero</DescripcionSalsa>
+                        </CirculoSalsa>
+                        <CirculoSalsa className="CirculoSalsa" color='#BF5000'>
+                            <DescripcionSalsa>BBQ Hot</DescripcionSalsa>
+                        </CirculoSalsa>
+                    </div>
+                    <div style={{ width: '20%' }}>
+                        <CirculoSalsa className="CirculoSalsa" color='#6A2C00'>
+                            <DescripcionSalsa>BBQ</DescripcionSalsa>
+                        </CirculoSalsa>
+                    </div>
+                    <div style={{ display: 'flex', width: '20%', height: '100%', justifyContent: 'space-between', flexDirection: 'column' }}>
+                        <CirculoSalsa className="CirculoSalsa" color='#FFF6BF' >
+                            <DescripcionSalsa>Ajo Parmesano</DescripcionSalsa>
+                        </CirculoSalsa>
+                        <CirculoSalsa className="CirculoSalsa" color='#D47700'>
+                            <DescripcionSalsa>Tamarindo</DescripcionSalsa>
+                        </CirculoSalsa>
+                    </div>
+                    <div style={{ width: '20%' }}>
+                        <CirculoSalsa className="CirculoSalsa" color='#FFF63C'>
+                            <DescripcionSalsa>Lemon Pepper</DescripcionSalsa>
+                        </CirculoSalsa>
+                    </div>
+
+                </CirculosDesktop>
+            </ContenedorSalsas>
+            <div style={{ height: '15vh' }}></div>
         </>
     )
 }
