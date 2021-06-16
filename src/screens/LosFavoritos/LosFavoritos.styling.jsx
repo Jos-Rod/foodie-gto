@@ -9,6 +9,10 @@ export const TituloSnacks = styled.h1`
 export const ContenedorFavoritosEImagen = styled.div`
     display: flex;
     height: 70vh;
+
+    @media screen and (min-width: 768px) {
+        height: 50vh;
+    }
 `;
 
 export const ContenedorFavoritos = styled.div`
@@ -40,8 +44,9 @@ export const ContenedorSalsas = styled.div`
     }
 
     @media screen and (min-width: 768px) {
-        height: 60vh;
+        height: 80vh;
         min-height: 600px;
+        /* background-color: brown; */
     }
 `;
 
@@ -54,6 +59,10 @@ export const CirculoSalsa = styled.div`
     align-items: center;
     justify-content: center;
     font-family: 'SpecialElite';
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 30px;
+    }
 `;
 
 export const DescripcionSalsa = styled.p`
@@ -66,4 +75,22 @@ export const CirculosDesktop = styled.div`
     align-content: center;
     align-items: center;
     justify-content: space-around;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 `;
+
+export const CirculosIPad = styled.div`
+    height: 100%;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    display: none;
+    
+    @media screen and (max-width: 768px) {
+        visibility: visible;
+        display: flex;
+    }
+`;
+
