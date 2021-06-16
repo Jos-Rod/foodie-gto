@@ -24,11 +24,11 @@ const Hamburguesas = () => {
             <ContainerHamburguesas>
                 <ListaHamburguesasEspeciales >
                     <h3 className="fontFSpecialElite" style={{ textAlign: 'center' }}>Hamburgueas especiales</h3>
-                    <ContenedorListaConPrecio lista={listaHamburguesasEspeciales} />
+                    <ContenedorListaConPrecio childrenWithMargin={true} lista={listaHamburguesasEspeciales} />
                 </ListaHamburguesasEspeciales>
                 <ListaHamburguesasBasicas>
                     <h3 className="fontFSpecialElite" style={{ textAlign: 'center' }}>Hamburgueas básicas</h3>
-                    <ContenedorListaConPrecio lista={listaHamburguesasBasicas} />
+                    <ContenedorListaConPrecio childrenWithMargin={true} lista={listaHamburguesasBasicas} />
                 </ListaHamburguesasBasicas>
             </ContainerHamburguesas>
             {/* Cual elegirias? */}

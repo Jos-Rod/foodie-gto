@@ -1,15 +1,15 @@
 import React from 'react';
 import {ContenedorListaConPrecioParent, RowListaConPrecio, ElementoListaConPrecio} from './ContenedorListaConPrecio.styling';
 
-const ContenedorListaConPrecio = ({lista}) => {
+const ContenedorListaConPrecio = ({lista, childrenWithMargin = false}) => {
     return (
         <>
             <ContenedorListaConPrecioParent>
                 {lista.map(e => {
                     return (
                         <RowListaConPrecio>
-                            <ElementoListaConPrecio className="fontFSpecialElite" style={{textAlign: 'left'}}>{e.title}</ElementoListaConPrecio>
-                            <ElementoListaConPrecio className="fontFSpecialElite" style={{textAlign: 'right'}}>{e.precio}</ElementoListaConPrecio>
+                            <ElementoListaConPrecio childrenWithMargin={childrenWithMargin} className="fontFSpecialElite" style={{textAlign: 'left'}}>{e.title}</ElementoListaConPrecio>
+                            <ElementoListaConPrecio childrenWithMargin={childrenWithMargin} className="fontFSpecialElite" style={{textAlign: 'right'}}>{e.precio}</ElementoListaConPrecio>
                         </RowListaConPrecio>
                     )
                 })}
