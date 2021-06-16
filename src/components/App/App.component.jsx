@@ -4,6 +4,7 @@ import ThemeContext, { themes } from '../../providers/Theme/Theme.provider';
 import Principal from '../../screens/Principal/principal.component';
 import Navbar from '../Navbar/Navbar.component';
 import Footer from '../Footer/Footer.component';
+import Bebidas from '../../screens/Bebidas/Bebidas.component';
 import Menu from '../../screens/Menu/Menu.component';
 import LosFavoritos from '../../screens/LosFavoritos/LosFavoritos.component';
 
@@ -40,6 +41,12 @@ function App() {
           <Route exact path="/favoritos">
             <div style={{ position: 'relative' }}>
               <LosFavoritos />
+              <Footer />
+            </div>
+          </Route>
+          <Route exact path="/bebidas">
+            <div style={{ position: 'relative' }}>
+              <Bebidas />
               <Footer />
             </div>
           </Route>
