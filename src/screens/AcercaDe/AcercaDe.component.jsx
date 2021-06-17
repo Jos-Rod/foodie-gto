@@ -37,17 +37,17 @@ const AcercaDe = () => {
                     <LogoFoodie img={imagenLogo} />
                     <ContenedorDescripcionP>
                         <p>
-                            Somos una empresa dedicada a preparación y venta de alimentos y platillos, utilizando nuestro
+                            Somos una empresa dedicada a preparación y venta de alimentos y platillos, <br /> utilizando nuestro
                             conocimiento y fucionando la comida mexicana y estadounidense de alguna manera.
                             <br />
-                            Todos los alimentos son preparados al momento de ordenar, es por ello que nos caracterizamos
+                            Todos los alimentos son preparados al momento de ordenar, es por ello que <br /> nos caracterizamos
                             por brindar un servicio confiable, fresco, delicioso e innovador.
                         </p>
                     </ContenedorDescripcionP>
                 </ContenedorDescripcionFoodie>
                 <ContenedorDescripcionImagen img={imagenDescripcion} />
             </ContenedorPrimeraDescripcion>
-            <ImagenPortadaPaginas height='60vh' title='Nos distinguimos por' img={imagenNosDistinguimosPor} />
+            <ImagenPortadaPaginas heightOniPad='37vh' withMarginTop={false} height='60vh' title='Nos distinguimos por' img={imagenNosDistinguimosPor} />
             <ContenedorCaracteristicas>
                 {
                     listaCaracteristicas.map(e => {
@@ -73,6 +73,7 @@ const AcercaDe = () => {
                     </p>
                 </ContenedorNegroDescripcion>
             </ContenedorDescripcionPuebloMagico>
+            <div style={{height: '5vh'}}></div>
         </>
     )
 }

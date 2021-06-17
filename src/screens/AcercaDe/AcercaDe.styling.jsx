@@ -6,6 +6,11 @@ export const ContenedorPrimeraDescripcion = styled.div`
     height: 80vh;
     min-height: 525px;
     display: flex;
+
+    @media screen and (max-width: 768px) {
+        height: 40vh;
+        min-height: 410px;
+    }
 `;
 
 export const ContenedorDescripcionFoodie = styled.div`
@@ -14,6 +19,10 @@ export const ContenedorDescripcionFoodie = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+        width: 55%;
+    }
 `;
 
 export const ContenedorDescripcionImagen = styled.div`
@@ -23,6 +32,10 @@ export const ContenedorDescripcionImagen = styled.div`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media screen and (max-width: 768px) {
+        width: 45%;
+    }
 `;
 
 export const LogoFoodie = styled.div`
@@ -31,10 +44,19 @@ export const LogoFoodie = styled.div`
     height: 50%;
     background-size: contain;
     background-repeat: no-repeat;
+
+    @media screen and (max-width: 768px) {
+        width: 80%;
+    }
 `;
 
 export const ContenedorDescripcionP = styled.div`
     width: 80%;
+    
+    @media screen and (max-width: 768px) {
+        font-size: 8pt;
+        width: 90%;
+    }
 `;
 
 export const ContenedorCaracteristicas = styled.div`
@@ -42,6 +64,12 @@ export const ContenedorCaracteristicas = styled.div`
     height: 50vh;
     /* background-color: beige; */
     display: flex;
+
+    @media screen and (max-width: 768px) {
+        display: inline-block;
+        height: 80vh;
+        align-content: center;
+    }
 `;
 
 export const CaracteristicaStyle = styled.div`
@@ -53,6 +81,12 @@ export const CaracteristicaStyle = styled.div`
     align-content: center;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+        width: 50%;
+        height: 50%;
+        display: inline-flex;
+    }
 `;
 
 export const CaracteristicaImagen = styled.div`
@@ -62,6 +96,11 @@ export const CaracteristicaImagen = styled.div`
     background-position: center;
     width: 50%;
     height: 30%;
+
+    @media screen and (max-width: 768px) {
+        height: 80px;
+        margin-top: 20px;
+    }
 `;
 
 export const DivBlanco = styled.div`
@@ -78,6 +117,10 @@ export const ContenedorDescripcionPuebloMagico = styled.div`
     height: 45vh;
     width: 100%;
     background-color: beige;
+
+    @media screen and (max-width: 768px) {
+        height: 30vh;
+    }
 `;
 
 export const ImagenPuebloMagico = styled.div`
@@ -87,6 +130,10 @@ export const ImagenPuebloMagico = styled.div`
     background-position: center;
     width: 33%;
     height: 100%;
+
+    @media screen and (max-width: 768px) {
+        width: 40%;
+    }
 `;
 
 export const ContenedorNegroDescripcion = styled.div`
@@ -100,4 +147,9 @@ export const ContenedorNegroDescripcion = styled.div`
     justify-content: center;
     align-items: center;
     font-size: 14pt;
+
+    @media screen and (max-width: 768px) {
+        font-size: 8pt;
+        width: 60%;
+    }
 `;

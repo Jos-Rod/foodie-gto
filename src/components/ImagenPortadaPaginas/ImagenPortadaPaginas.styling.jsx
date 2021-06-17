@@ -4,7 +4,7 @@ export const ImagenPortadaStyled = styled.div`
     background-image: url(${props => props.img});
     height: ${props => props.height};
     background-position: ${props => props.centered ? 'center' : 'top'};
-    margin-top: 23px;
+    margin-top: ${props => props.withMarginTop ? '23px' : '0px'}; 
     background-size: cover;
     background-repeat: no-repeat;
     display: grid;
@@ -13,7 +13,7 @@ export const ImagenPortadaStyled = styled.div`
     color: ${props => props.textColor};
 
     @media screen and (max-width: 768px) {
-        height: 20vh;
+        height: ${props => props.heightOniPad}; 
         background-position-y: ${props => props.yOffSiteIPad};
     }
 `;
