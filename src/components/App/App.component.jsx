@@ -6,6 +6,7 @@ import Navbar from '../Navbar/Navbar.component';
 import Footer from '../Footer/Footer.component';
 import Bebidas from '../../screens/Bebidas/Bebidas.component';
 import Menu from '../../screens/Menu/Menu.component';
+import AcercaDe from '../../screens/AcercaDe';
 import LosFavoritos from '../../screens/LosFavoritos/LosFavoritos.component';
 
 var titlesAndLinks = [
@@ -47,6 +48,12 @@ function App() {
           <Route exact path="/bebidas">
             <div style={{ position: 'relative' }}>
               <Bebidas />
+              <Footer />
+            </div>
+          </Route>
+          <Route exact path="/acercade">
+            <div style={{ position: 'relative' }}>
+              <AcercaDe />
               <Footer />
             </div>
           </Route>
