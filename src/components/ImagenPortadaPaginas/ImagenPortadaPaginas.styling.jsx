@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ImagenPortadaStyled = styled.div`
     background-image: url(${props => props.img});
-    height: 30vh;
+    height: ${props => props.height};
     background-position: ${props => props.centered ? 'center' : 'top'};
     margin-top: 23px;
     background-size: cover;
@@ -10,6 +10,7 @@ export const ImagenPortadaStyled = styled.div`
     display: grid;
     align-items: center;
     justify-items: center;
+    color: ${props => props.textColor};
 
     @media screen and (max-width: 768px) {
         height: 20vh;

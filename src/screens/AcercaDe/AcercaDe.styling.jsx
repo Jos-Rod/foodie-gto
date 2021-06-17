@@ -36,3 +36,30 @@ export const LogoFoodie = styled.div`
 export const ContenedorDescripcionP = styled.div`
     width: 80%;
 `;
+
+export const ContenedorCaracteristicas = styled.div`
+    width: 100%;
+    height: 50vh;
+    /* background-color: beige; */
+    display: flex;
+`;
+
+export const CaracteristicaStyle = styled.div`
+    width: 25%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const CaracteristicaImagen = styled.div`
+    background-image: url(${props => props.img});
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 50%;
+    height: 30%;
+`;
