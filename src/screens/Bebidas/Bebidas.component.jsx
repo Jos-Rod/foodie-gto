@@ -9,7 +9,9 @@ import imagenSmoothieGansito from '../../imgs/bebidas/smoothieGansito.jpg';
 import imagenSmoothieFresa from '../../imgs/bebidas/smoothieFresa.jpg';
 import imagenSmoothieChicle from '../../imgs/bebidas/smoothieChicle.jpg';
 import imagenSmoothieTaro from '../../imgs/bebidas/smoothieTaro.jpg';
-import { ContenedorGeneralBebidas, ImagenBebidaStyle, ContenedorBebidaStyle, ContenedorNegro, ContenedorInformacion } from './Bebidas.styling';
+import imagenCafe from '../../imgs/bebidas/cafe.jpg';
+import { ContenedorGeneralBebidas, ContenedorOtrasBebidas, ContenedorOtrasBebidasImagen, ContenedorOtrasBebidasEImagen, ImagenBebidaStyle, ContenedorBebidaStyle, ContenedorNegro, ContenedorInformacion } from './Bebidas.styling';
+import  ContenedorListaConPrecio from '../../components/ContenedorListaConPrecio';
 
 const listaBebidas = [
     { title: 'Orange Energizer', img: imagenOrangeEnergizer },
@@ -20,6 +22,13 @@ const listaBebidas = [
     { title: 'Smoothie de fresa', img: imagenSmoothieFresa },
     { title: 'Smoothie de chicle', img: imagenSmoothieChicle },
     { title: 'Smoothie de taro', img: imagenSmoothieTaro },
+];
+
+const listaBebidasLabelsPrecios = [
+    {title: 'Té', precio: '$50'},
+    {title: 'Café', precio: '$50'},
+    {title: 'Refrescos', precio: '$50'},
+    {title: 'Licuado del día', precio: '$50'},
 ];
 
 const ContenedorBebida = ({ title, img }) => {
@@ -52,7 +61,16 @@ const Bebidas = () => {
                     </div>
                 </ContenedorInformacion>
             </ContenedorGeneralBebidas>
-            <div style={{ height: '10vh' }}></div>
+            <ContenedorOtrasBebidasEImagen>
+                <ContenedorOtrasBebidas>
+                        <h1 className="centered" style={{margin: '0px', marginBottom: '20px'}}>Otras bebidas</h1>
+                        <div style={{ display: 'block', width: '70%' }}>
+                        <ContenedorListaConPrecio lista={listaBebidasLabelsPrecios} />
+                        </div>
+                </ContenedorOtrasBebidas>
+                <ContenedorOtrasBebidasImagen img={imagenCafe} />
+            </ContenedorOtrasBebidasEImagen>
+            <div style={{ height: '1vh' }}></div>
         </>
     )
 }

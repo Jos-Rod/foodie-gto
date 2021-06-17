@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const ContenedorGeneralBebidas = styled.div`
     height: 90vh;
-    /* background-color: brown; */
     margin-top: 60px;
     min-height: 790px;
     position: relative;
@@ -48,4 +47,32 @@ export const ImagenBebidaStyle = styled.div`
     background-position: center;
     width: 80%;
     height: 70%;
+`;
+
+export const ContenedorOtrasBebidasEImagen = styled.div`
+    width: 100%;
+    height: 60vh;
+    display: flex;
+`;
+
+export const ContenedorOtrasBebidas = styled.div`
+    width: 45%;
+    height: 63%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+`;
+
+export const ContenedorOtrasBebidasImagen = styled.div`
+    width: 55%;
+    background-image: url(${props => props.img});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
 `;
