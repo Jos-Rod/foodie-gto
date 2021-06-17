@@ -45,7 +45,7 @@ const ContenedorBebida = ({ title, img }) => {
 const Bebidas = () => {
     return (
         <>
-            <ImagenPortadaPaginas img={imagenPortada} title='Las Bebidas' textColor='black' />
+            <ImagenPortadaPaginas img={imagenPortada} yOffSiteIPad='30%' title='Las Bebidas' textColor='black' />
             <ContenedorGeneralBebidas>
                 <ContenedorNegro />
                 <ContenedorInformacion>

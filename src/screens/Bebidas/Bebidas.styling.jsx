@@ -26,6 +26,10 @@ export const ContenedorInformacion = styled.div`
     top: 5%;
     color: white;
     text-align: center;
+    
+    @media screen and (max-width: 768px) {
+        height: 100%;
+    }
 `;
 
 export const ContenedorBebidaStyle = styled.div`
@@ -38,6 +42,11 @@ export const ContenedorBebidaStyle = styled.div`
     align-content: center;
     justify-content: center;
     justify-items: center;
+
+    @media screen and (max-width: 768px) {
+        width: 30%;
+    }
+
 `;
 
 export const ImagenBebidaStyle = styled.div`
@@ -53,6 +62,11 @@ export const ContenedorOtrasBebidasEImagen = styled.div`
     width: 100%;
     height: 60vh;
     display: flex;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 400px;
+        height: 40vh;
+    }
 `;
 
 export const ContenedorOtrasBebidas = styled.div`
@@ -66,6 +80,11 @@ export const ContenedorOtrasBebidas = styled.div`
     align-items: center;
     justify-content: center;
     justify-items: center;
+
+    @media screen and (max-width: 768px) {
+        width: 60%;
+        height: 70%;
+    }
 `;
 
 export const ContenedorOtrasBebidasImagen = styled.div`
@@ -75,4 +94,9 @@ export const ContenedorOtrasBebidasImagen = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
+
+    @media screen and (max-width: 768px) {
+        width: 40%;
+        background-position-x: 57%;
+    }
 `;

@@ -13,5 +13,6 @@ export const ImagenPortadaStyled = styled.div`
 
     @media screen and (max-width: 768px) {
         height: 20vh;
+        background-position-y: ${props => props.yOffSiteIPad};
     }
 `;
