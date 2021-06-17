@@ -12,7 +12,7 @@ export const ContenedorGeneralBebidas = styled.div`
 `;
 
 export const ContenedorNegro = styled.div`
-    background-color: black;
+    background-color: #1D1D1B;
     height: 37%;
     width: 100%;
     position: absolute;
