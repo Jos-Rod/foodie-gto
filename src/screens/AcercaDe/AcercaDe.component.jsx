@@ -1,6 +1,7 @@
 import React from 'react';
-import { ContenedorPrimeraDescripcion, ContenedorCaracteristicas, CaracteristicaImagen, CaracteristicaStyle, ContenedorDescripcionP, LogoFoodie, ContenedorDescripcionFoodie, ContenedorDescripcionImagen } from './AcercaDe.styling';
+import { ContenedorPrimeraDescripcion, ContenedorNegroDescripcion, ImagenPuebloMagico, ContenedorDescripcionPuebloMagico, ContenedorTituloPuebloMagico, DivBlanco, ContenedorCaracteristicas, CaracteristicaImagen, CaracteristicaStyle, ContenedorDescripcionP, LogoFoodie, ContenedorDescripcionFoodie, ContenedorDescripcionImagen } from './AcercaDe.styling';
 import imagenDescripcion from '../../imgs/fideos.jpg';
+import imagenPuebloMagico from '../../imgs/puebloMagico.jpg';
 import imagenLogo from '../../imgs/logo.png';
 import iconoBurger from '../../imgs/icons/iconoBurger.png';
 import iconoChile from '../../imgs/icons/iconoChile.png';
@@ -51,10 +52,27 @@ const AcercaDe = () => {
                 {
                     listaCaracteristicas.map(e => {
                         return <Caracteristica description={e.description} img={e.img} />
-                    })  
+                    })
                 }
             </ContenedorCaracteristicas>
-            <div style={{ height: '10vh' }}></div>
+            <div style={{display: 'flex'}}>
+                <DivBlanco />
+                <ContenedorTituloPuebloMagico>
+                    <h1 className="title centered" style={{margin: '20px'}}>El pueblo mágico...</h1>
+                </ContenedorTituloPuebloMagico>
+            </div>
+            <ContenedorDescripcionPuebloMagico>
+                <ImagenPuebloMagico img={imagenPuebloMagico} />
+                <ContenedorNegroDescripcion>
+                    <p style={{display: 'block', paddingBottom: '5vh'}}>
+                        Nos encontramos ubicados en el pueblo Mágico de Yuriria Gto. una ciudad <br />
+                        fundada en 1540 por agustinos y esta se encuentra en el sur del estado. <br />
+                        Un dato interesante es el nombre de nuestra ciudad: <br />
+                        Yuriria es un nombre de origen purépecha, derivado de "Yuririapúndaro", <br />
+                        vocablo que significa "Lago de sangre"
+                    </p>
+                </ContenedorNegroDescripcion>
+            </ContenedorDescripcionPuebloMagico>
         </>
     )
 }

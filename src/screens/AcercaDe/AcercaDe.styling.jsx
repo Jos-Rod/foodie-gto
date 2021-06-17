@@ -63,3 +63,41 @@ export const CaracteristicaImagen = styled.div`
     width: 50%;
     height: 30%;
 `;
+
+export const DivBlanco = styled.div`
+    width: 33%;
+    height: 1px;
+`;
+
+export const ContenedorTituloPuebloMagico = styled.div`
+    width: 66%;
+`;
+
+export const ContenedorDescripcionPuebloMagico = styled.div`
+    display: flex;
+    height: 45vh;
+    width: 100%;
+    background-color: beige;
+`;
+
+export const ImagenPuebloMagico = styled.div`
+    background-image: url(${props => props.img});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 33%;
+    height: 100%;
+`;
+
+export const ContenedorNegroDescripcion = styled.div`
+    background-color: black;
+    width: 67%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 14pt;
+`;
