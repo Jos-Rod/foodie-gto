@@ -12,6 +12,10 @@ export const PrincipalNavbarStyled = styled.div`
     @media screen and (max-width: 768px) {
         padding-left: 1px;
     }
+
+    @media screen and (max-width: 420px) {
+        display: none;
+    }
 `;
 
 export const ButtonLinkNavbar = styled.div`
@@ -29,5 +33,22 @@ export const ButtonLinkNavbar = styled.div`
     @media screen and (max-width: 768px) {
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    @media screen and (max-width: 420px) {
+        font-size: 8pt;
+    }
+`;
+
+// Phone size
+export const PrincipalNavbarStyledPhoneSize = styled.div`
+    display: none;
+
+    @media screen and (max-width: 420px) {
+        display: flex;
+        border-top: 2px black solid;
+        border-bottom: 2px black solid;
+        height: 45px;
+        width: 100%;
     }
 `;

@@ -7,9 +7,8 @@ export const PrincipalFooterStyled = styled.div`
     border-top-right-radius: 40px;
     padding-top: -10px;
 
-    @media screen and (max-width: 768px) {
-        height: 16vh;
-        padding-top: 20px;
+    @media screen and (max-width: 114px) {
+        
     }
 `;
 
