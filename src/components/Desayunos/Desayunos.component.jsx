@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import imagenDesayunos from '../../imgs/desayunoCuadrado.jpg';
+import imagenDesayunosPhoneSize from '../../imgs/desayunosYAlmuerzos.jpg';
 import imagenTorta from '../../imgs/torta.jpg';
 import ThemeContext from '../../providers/Theme/Theme.provider';
-import {TablaDesayunos, TablaTorta, DetalleTorta, ContenedorNegro, DescripcionTortaPrecio, ContenedorTortasLista, ContenedorDetalleTortas, DetalleAlmuerzos, ContenedorImagenTorta, ContainerDesayunosLista, DescripcionDesayunoPrecio, CuadroBlanco, DescripcionDesayuno, ContenedorImagen, TituloDesayuno, ImagenDesayuno } from './Desayunos.styling';
+import {TablaDesayunos, TablaTorta, DetalleTorta, H1Desayuno, ImagenDesayunoPhoneSize, ContenedorImagenChild, ContainerListaDesayunosParent, H1DesayunoPhoneSize, PDesayunos, ContenedorNegro, DescripcionTortaPrecio, ContenedorTortasLista, ContenedorDetalleTortas, DetalleAlmuerzos, ContenedorImagenTorta, ContainerDesayunosLista, DescripcionDesayunoPrecio, CuadroBlanco, DescripcionDesayuno, ContenedorImagen, TituloDesayuno, ImagenDesayuno } from './Desayunos.styling';
 
 const desayunosAlmuerzosLabel = [
     { title: 'Cuatro hotcakes con maple', precio: '$45' },
@@ -29,21 +30,18 @@ const Desayunos = () => {
     return (
         <>
             <div style={{ textAlign: 'center' }}>
-                <h1 className="title">¿Ya tienes que desayunar?</h1>
+                <H1Desayuno className="title">¿Ya tienes que desayunar?</H1Desayuno>
+                <H1DesayunoPhoneSize>¿Ya tienes <br /> que desayunar?</H1DesayunoPhoneSize>
             </div>
             <DetalleAlmuerzos color={cremaColor}>
-                <div style={{ display: 'flex', height: '100%' }}>
+                <div style={{ display: 'flex', height: '100%', flexDirection: 'column' }}>
                     <DescripcionDesayuno>
                         <TituloDesayuno>Desayunos y almuerzos</TituloDesayuno>
-                        <p className="fontFSpecialElite">DISPONIBLE DESDE LAS 9 AM</p>
+                        <p className="fontFSpecialElite" style={{marginTop: '0px'}}>DISPONIBLE DESDE LAS 9 AM</p>
                         <CuadroBlanco>
-                            <div style={{
-                                paddingLeft: '20px',
-                                width: '70%',
-                                height: '100%'
-                            }}>
-                                <p className="fontFSpecialElite" style={{ textAlign: 'left', marginLeft: '5%', marginTop: '10%' }}>Desayunos</p>
-                                <ContainerDesayunosLista style={{ textAlign: 'left', marginLeft: '40px', position: 'absolute', top: '60px', bottom: '' }}>
+                            <ContainerListaDesayunosParent>
+                                <PDesayunos className="fontFSpecialElite" style={{ textAlign: 'left', marginLeft: '5%', marginTop: '10%' }}>Desayunos</PDesayunos>
+                                <ContainerDesayunosLista>
                                     {
                                         desayunosAlmuerzosLabel.map(e => {
                                             return (
@@ -55,13 +53,14 @@ const Desayunos = () => {
                                         })
                                     }
                                 </ContainerDesayunosLista>
-                            </div>
+                            </ContainerListaDesayunosParent>
                         </CuadroBlanco>
                     </DescripcionDesayuno>
                     <ContenedorImagen>
-                        <div style={{ width: '90%', height: '100%', marginRight: 'auto', marginLeft: 'auto' }}>
+                        <ContenedorImagenChild>
                             <ImagenDesayuno img={imagenDesayunos} />
-                        </div>
+                            <ImagenDesayunoPhoneSize img={imagenDesayunosPhoneSize} />
+                        </ContenedorImagenChild>
                     </ContenedorImagen>
 
                 </div>
