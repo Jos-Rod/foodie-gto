@@ -5,6 +5,10 @@ export const ContenedorGeneral = styled.div`
     height: 80vh;
     display: flex;
     min-height: 600px;
+
+    @media screen and (max-width: 768px) {
+        height: 60vh;
+    }
 `;
 
 export const ContenedorImagenParent = styled.div`
