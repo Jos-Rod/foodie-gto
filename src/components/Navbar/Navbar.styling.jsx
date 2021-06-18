@@ -46,7 +46,7 @@ export const PrincipalNavbarStyledPhoneSize = styled.div`
 
     @media screen and (max-width: 420px) {
         display: flex;
-        border-top: 2px black solid;
+        border-top: ${props => props.withoutTopBorder ? '' : '2px black solid'} ;
         border-bottom: 2px black solid;
         height: 45px;
         width: 100%;

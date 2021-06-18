@@ -39,20 +39,46 @@ const Navbar = ({ titlesAndLinks }) => {
                         </div>
                     </ButtonLinkNavbar>
                 </Link>
-                <Link to='/' style={{ textDecoration: 'none', color: 'inherit', width: '38%' }}>
+                <Link to='/menu' style={{ textDecoration: 'none', color: 'inherit', width: '38%' }}>
                     <ButtonLinkNavbar  colorSelected={cremaColor}  >
                         <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <p style={{ margin: '0px', alignSelf: 'center' }}>Menú diario</p>
                         </div>
                     </ButtonLinkNavbar>
                 </Link>
-                <Link to='/' style={{ textDecoration: 'none', color: 'inherit', width: '38%' }}>
+                <Link to='/favoritos' style={{ textDecoration: 'none', color: 'inherit', width: '38%' }}>
                     <ButtonLinkNavbar colorSelected={cremaColor} style={{}}  >
                         <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <p style={{ margin: '0px', alignSelf: 'center' }}>Los favoritos</p>
                         </div>
                     </ButtonLinkNavbar>
                 </Link>
+            </PrincipalNavbarStyledPhoneSize>
+            <PrincipalNavbarStyledPhoneSize withoutTopBorder>
+                <Link to='/bebidas' style={{ textDecoration: 'none', color: 'inherit', width: '25%' }}>
+                    <ButtonLinkNavbar colorSelected={cremaColor} style={{}}  >
+                        <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <p style={{ margin: '0px', alignSelf: 'center' }}>Bebidas</p>
+                        </div>
+                    </ButtonLinkNavbar>
+                </Link>
+                <Link to='/acercade' style={{ textDecoration: 'none', color: 'inherit', width: '25%' }}>
+                    <ButtonLinkNavbar colorSelected={cremaColor}  >
+                        <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <p style={{ margin: '0px', alignSelf: 'center' }}>Acerca de Foodie</p>
+                        </div>
+                    </ButtonLinkNavbar>
+                </Link>
+                <Link to='/contacto' style={{ textDecoration: 'none', color: 'inherit', width: '25%' }}>
+                    <ButtonLinkNavbar colorSelected={cremaColor} style={{}}  >
+                        <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <p style={{ margin: '0px', alignSelf: 'center' }}>Contacto</p>
+                        </div>
+                    </ButtonLinkNavbar>
+                </Link>
+                <ButtonLinkNavbar style={{ marginTop: 'auto', marginBottom: 'auto', display: 'block', height: '70%', width: '25%' }}>
+                    <img src={logo} style={{ maxWidth: '100%', maxHeight: '100%' }} />
+                </ButtonLinkNavbar>
             </PrincipalNavbarStyledPhoneSize>
         </div>
     );

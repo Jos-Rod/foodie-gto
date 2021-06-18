@@ -12,6 +12,11 @@ export const CirculoComidaStyled = styled.div`
         max-width: 1000px;
     }
 
+    @media screen and (max-width: 420px) {
+        width: 45%;
+        padding: 0px;
+    }
+
 `;
 
 export const ImageCircleSyled = styled.div`

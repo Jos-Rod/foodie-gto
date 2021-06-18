@@ -11,7 +11,7 @@ import imgPasta from '../../imgs/especialesSemana/pasta.jpg';
 import imgAlitas from '../../imgs/especialesSemana/alitas.jpeg';
 import imgCeviche from '../../imgs/especialesSemana/ceviche.jpg';
 import imgTostada from '../../imgs/especialesSemana/tostada.jpg';
-import { CicrulosComidasListStyled, ImagenEspecialSemana, ImagenEspecialSemanaList, ImagenLogoCentro, ImagenPortada } from './principal.styling';
+import { CicrulosComidasListStyled, ContainerPrincipalBienvenido, H1TipoAntojoiPhoneSize, H1TipoAntojo, ContenedorTituloBienvenido, ImagenEspecialSemana, ImagenEspecialSemanaList, ImagenLogoCentro, ImagenPortada } from './principal.styling';
 import Footer from '../../components/Footer/Footer.component';
 
 function Principal() {
@@ -30,20 +30,18 @@ function Principal() {
         <div>
             {/* Seccion principal */}
             <section title="principal">
-                <div>
-
-                    {/* <div style={{ width: '60%', marginLeft: 'auto', marginRight: 'auto' }}>
-                        <img src={logo} style={{ maxWidth: "100%", maxHeight: "100%" }} />
-                    </div> */}
+                <ContainerPrincipalBienvenido>
                     <ImagenPortada img={portada}>
                         <ImagenLogoCentro img={logo}>
                         </ImagenLogoCentro>
-                        <div style={{ position: 'absolute', left: '5%' }}>
+                        <ContenedorTituloBienvenido >
                             <h1 className="title" style={{ marginBottom: '0px' }}>¡Bienvenido a FoodieGto!</h1>
-                        </div>
-                        <h1 className="title" style={{ position: 'absolute', bottom: '4px', right: '5%' }}>¿Qué tipo de antojo tienes hoy?</h1>
+                        </ContenedorTituloBienvenido>
+                        {/* <h1TipoAntojo className="title">¿Qué tipo de antojo tienes hoy?</h1TipoAntojo> */}
+                        <H1TipoAntojo className="title">¿Qué tipo de antojo tienes hoy?</H1TipoAntojo>
+                        <H1TipoAntojoiPhoneSize className="title">¿Qué tipo de antojo <br /> tienes hoy?</H1TipoAntojoiPhoneSize>
                     </ImagenPortada>
-                </div>
+                </ContainerPrincipalBienvenido>
             </section>
             {/* Seccion de encuentra lo que necesites */}
             <section title="Encuentra lo que necesites" style={{ marginTop: '60px' }}>

@@ -10,6 +10,10 @@ export const PrincipalFooterStyled = styled.div`
     @media screen and (max-width: 114px) {
         
     }
+
+    @media screen and (max-width: 420px) {
+        display: none;
+    }
 `;
 
 export const LogoFooterStyled = styled.div`
@@ -34,4 +38,30 @@ export const DescripcionesTexto = styled.p`
     @media screen and (max-width: 768px) {
         font-size: 10pt;
     }
+
+    @media screen and (max-width: 420px) {
+        font-size: 8pt;
+        text-align: right;
+    }
+`;
+
+export const PrincipalFooterStyledPhoneSize = styled.div`
+    display: none;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    @media screen and (max-width: 420px) {
+        display: flex;
+        width: 100%;
+        background-color: ${props => props.color};
+        height: 20vh;
+    }
+`;
+
+export const LogoFooterStyledPhoneSize = styled.div`
+    background-image: url(${props => props.img});
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 65%;
+    height: 50%;
 `;
