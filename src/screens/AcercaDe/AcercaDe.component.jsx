@@ -73,7 +73,7 @@ const AcercaDe = () => {
                     </p>
                 </ContenedorNegroDescripcion>
             </ContenedorDescripcionPuebloMagico>
-            <div style={{height: '5vh'}}></div>
+            {/* <div style={{height: '5vh'}}></div> */}
         </>
     )
 }

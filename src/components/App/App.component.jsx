@@ -8,6 +8,7 @@ import Bebidas from '../../screens/Bebidas/Bebidas.component';
 import Menu from '../../screens/Menu/Menu.component';
 import AcercaDe from '../../screens/AcercaDe';
 import LosFavoritos from '../../screens/LosFavoritos/LosFavoritos.component';
+import Contacto from '../../screens/Contacto/Contacto.component';
 
 var titlesAndLinks = [
   { title: "Home", linkTo: "/", isSelected: true }, 
@@ -54,6 +55,12 @@ function App() {
           <Route exact path="/acercade">
             <div style={{ position: 'relative' }}>
               <AcercaDe />
+              <Footer />
+            </div>
+          </Route>
+          <Route exact path="/contacto">
+            <div style={{ position: 'relative' }}>
+              <Contacto />
               <Footer />
             </div>
           </Route>
