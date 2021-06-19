@@ -23,10 +23,24 @@ function App() {
 
   const currentTheme = themes;
 
+  const [titles, setTitles] = useState(titlesAndLinks);
+
+  function changeTitle(val) {
+    console.log(`change title: ${val}`);
+    const titlesAux = [...titles];
+    titlesAux.forEach(e => {
+      e.isSelected = false;
+      if (val === e.linkTo) {
+        e.isSelected = true;
+      }
+    });
+    setTitles(titlesAux);
+  }
+
   return (
     <HashRouter>
       <ThemeContext.Provider value={currentTheme} >
-        <Navbar titlesAndLinks={titlesAndLinks} />
+        <Navbar titlesAndLinks={titles} changeTitle={changeTitle} />
         <Switch>
           <Route exact path="/">
             <div style={{ position: 'relative' }}>

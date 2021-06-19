@@ -4,7 +4,7 @@ import { PrincipalNavbarStyled, ButtonLinkNavbar, PrincipalNavbarStyledPhoneSize
 import logo from '../../imgs/logo.png';
 import { Link } from 'react-router-dom';
 
-const Navbar = ({ titlesAndLinks }) => {
+const Navbar = ({ titlesAndLinks, changeTitle }) => {
 
     const { cremaColor } = useContext(ThemeContext);
 
@@ -18,7 +18,7 @@ const Navbar = ({ titlesAndLinks }) => {
                 {
                     titlesAndLinks.map(header => {
                         return (
-                            <Link to={header.linkTo} key={header.linkTo} style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <Link to={header.linkTo} key={header.linkTo} style={{ textDecoration: 'none', color: 'inherit' }} onClick={() => changeTitle(header.linkTo)} >
                                 <ButtonLinkNavbar isSelected={header.isSelected} colorSelected={cremaColor}  >
                                     <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                         <p style={{ margin: '0px', alignSelf: 'center' }}>{header.title}</p>
