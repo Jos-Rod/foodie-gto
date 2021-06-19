@@ -65,3 +65,18 @@ export const LogoFooterStyledPhoneSize = styled.div`
     width: 65%;
     height: 50%;
 `;
+
+export const ContainerRedesSociales = styled.div`
+    display: inline-block;
+    height: 70%;
+    width: 78px;
+
+    @media screen and (max-width: 768px) {
+        width: 60px;
+        height: 40%;
+    }
+
+    @media screen and (max-width: 420px) {
+        display: none;
+    }
+`;

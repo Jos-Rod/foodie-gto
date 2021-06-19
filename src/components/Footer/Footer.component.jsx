@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import ThemeContext from '../../providers/Theme/Theme.provider';
-import { PrincipalFooterStyled, LogoFooterStyled, LogoFooterStyledPhoneSize, PrincipalFooterStyledPhoneSize, YuririaTexto, DescripcionesTexto } from './Footer.styling';
+import { PrincipalFooterStyled, LogoFooterStyled, LogoFooterStyledPhoneSize, ContainerRedesSociales, PrincipalFooterStyledPhoneSize, YuririaTexto, DescripcionesTexto } from './Footer.styling';
 import logo from '../../imgs/logo.png';
 import iconoWhatsapp from '../../imgs/icons/iconoWhatsapp.png';
 import iconoFacebook from '../../imgs/icons/iconoFacebook.png';
@@ -28,9 +28,17 @@ const Footer = () => {
                             <DescripcionesTexto className="noMargin fontFSpecialElite">Sábado-Domingo 9:00am a 6:00pm</DescripcionesTexto>
                         </div>
                         {/* Redes sociales. */}
-                        <div style={{ display: 'inline-block' }}>
-                            <YuririaTexto className="fontFSpecialElite">Redes</YuririaTexto>
-                        </div>
+                        <ContainerRedesSociales>
+                            <div style={{ width: '100%', height: '50%' }}>
+                                <div style={{ width: '100%', backgroundImage: `url(${iconoWhatsapp})`, height: '70%', backgroundSize: '50%', backgroundRepeat: 'no-repeat', backgroundPosition: 'right' }}></div>
+                            </div>
+                            <div style={{ width: '50%', height: '50%', display: 'inline-block' }}>
+                                <div style={{ width: '100%', backgroundImage: `url(${iconoInstagram})`, height: '65%', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'right' }}></div>
+                            </div>
+                            <div style={{ width: '50%', height: '50%', display: 'inline-block' }}>
+                                <div style={{ width: '100%', backgroundImage: `url(${iconoFacebook})`, height: '65%', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'right' }}></div>
+                            </div>
+                        </ContainerRedesSociales>
                         {/* Yuriria, Gto. */}
                         <div style={{ display: 'inline-block', textAlign: 'right' }}>
                             <YuririaTexto className="noMargin fontFSpecialElite" style={{ margin: '0px', marginBottom: '10px' }}>4471315212</YuririaTexto>
@@ -58,7 +66,7 @@ const Footer = () => {
                                     <div style={{ width: '100%', backgroundImage: `url(${iconoWhatsapp})`, height: '70%', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'right' }}></div>
                                 </div>
                                 <div style={{ width: '50%', height: '50%', display: 'inline-block' }}>
-                                    <div style={{ width: '100%', backgroundImage: `url(${iconoInstagram})`, height: '65%', backgroundSize: 'contain', backgroundRepeat: 'no-repeat',  }}></div>
+                                    <div style={{ width: '100%', backgroundImage: `url(${iconoInstagram})`, height: '65%', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', }}></div>
                                 </div>
                                 <div style={{ width: '50%', height: '50%', display: 'inline-block' }}>
                                     <div style={{ width: '100%', backgroundImage: `url(${iconoFacebook})`, height: '65%', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', }}></div>
