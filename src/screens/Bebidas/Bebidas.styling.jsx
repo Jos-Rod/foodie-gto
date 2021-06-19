@@ -89,6 +89,8 @@ export const ContenedorOtrasBebidasEImagen = styled.div`
 
     @media screen and (max-width: 420px) {
         margin-top: 330vh;
+        margin-bottom: -35%;
+        height: 60vh;
     }
 
     @media screen and (max-width: 376px) {
