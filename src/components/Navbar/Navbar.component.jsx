@@ -8,8 +8,9 @@ const Navbar = ({ titlesAndLinks, changeTitle }) => {
 
     const { cremaColor } = useContext(ThemeContext);
 
-    console.log("WOW");
-    console.log(titlesAndLinks);
+    console.log(`Title where:`);
+    console.log(titlesAndLinks.find(t => t.isSelected));
+    const currentlySelectedPhoneSize = titlesAndLinks.find(t => t.isSelected).linkTo;
 
     return (
         <div>
@@ -33,21 +34,21 @@ const Navbar = ({ titlesAndLinks, changeTitle }) => {
             </PrincipalNavbarStyled>
             <PrincipalNavbarStyledPhoneSize>
                 <Link to='/' style={{ textDecoration: 'none', color: 'inherit', width: '17%', marginLeft: '33px', marginRight:'50px' }}>
-                    <ButtonLinkNavbar isSelected colorSelected={cremaColor} style={{}}  >
+                    <ButtonLinkNavbar onClick={() => changeTitle('/')} isSelected={currentlySelectedPhoneSize == '/'} colorSelected={cremaColor} style={{}}  >
                         <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <p style={{ margin: '0px', alignSelf: 'center' }}>Home</p>
                         </div>
                     </ButtonLinkNavbar>
                 </Link>
                 <Link to='/menu' style={{ textDecoration: 'none', color: 'inherit', width: '38%' }}>
-                    <ButtonLinkNavbar  colorSelected={cremaColor}  >
+                    <ButtonLinkNavbar onClick={() => changeTitle('/menu')} isSelected={currentlySelectedPhoneSize == '/menu'} colorSelected={cremaColor}  >
                         <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <p style={{ margin: '0px', alignSelf: 'center' }}>Menú diario</p>
                         </div>
                     </ButtonLinkNavbar>
                 </Link>
                 <Link to='/favoritos' style={{ textDecoration: 'none', color: 'inherit', width: '38%' }}>
-                    <ButtonLinkNavbar colorSelected={cremaColor} style={{}}  >
+                    <ButtonLinkNavbar onClick={() => changeTitle('/favoritos')} isSelected={currentlySelectedPhoneSize == '/favoritos'} colorSelected={cremaColor} style={{}}  >
                         <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <p style={{ margin: '0px', alignSelf: 'center' }}>Los favoritos</p>
                         </div>
@@ -56,21 +57,21 @@ const Navbar = ({ titlesAndLinks, changeTitle }) => {
             </PrincipalNavbarStyledPhoneSize>
             <PrincipalNavbarStyledPhoneSize withoutTopBorder>
                 <Link to='/bebidas' style={{ textDecoration: 'none', color: 'inherit', width: '25%' }}>
-                    <ButtonLinkNavbar colorSelected={cremaColor} style={{}}  >
+                    <ButtonLinkNavbar onClick={() => changeTitle('/bebidas')} isSelected={currentlySelectedPhoneSize == '/bebidas'} colorSelected={cremaColor} style={{}}  >
                         <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <p style={{ margin: '0px', alignSelf: 'center' }}>Bebidas</p>
                         </div>
                     </ButtonLinkNavbar>
                 </Link>
                 <Link to='/acercade' style={{ textDecoration: 'none', color: 'inherit', width: '25%' }}>
-                    <ButtonLinkNavbar colorSelected={cremaColor}  >
+                    <ButtonLinkNavbar onClick={() => changeTitle('/acercade')} isSelected={currentlySelectedPhoneSize == '/acercade'}  colorSelected={cremaColor}  >
                         <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <p style={{ margin: '0px', alignSelf: 'center' }}>Acerca de Foodie</p>
                         </div>
                     </ButtonLinkNavbar>
                 </Link>
                 <Link to='/contacto' style={{ textDecoration: 'none', color: 'inherit', width: '25%' }}>
-                    <ButtonLinkNavbar colorSelected={cremaColor} style={{}}  >
+                    <ButtonLinkNavbar onClick={() => changeTitle('/contacto')} isSelected={currentlySelectedPhoneSize == '/contacto'}  colorSelected={cremaColor} style={{}}  >
                         <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <p style={{ margin: '0px', alignSelf: 'center' }}>Contacto</p>
                         </div>

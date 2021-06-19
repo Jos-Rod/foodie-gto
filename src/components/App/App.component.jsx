@@ -26,7 +26,6 @@ function App() {
   const [titles, setTitles] = useState(titlesAndLinks);
 
   function changeTitle(val) {
-    console.log(`change title: ${val}`);
     const titlesAux = [...titles];
     titlesAux.forEach(e => {
       e.isSelected = false;
