@@ -28,7 +28,7 @@ const ImagenPortadaPaginas = ({
             yOffSiteiPhone={yOffSiteiPhone}
             
             >
-                <h1 style={{ textAlign: 'center', fontSize: '40pt' }}>{title}</h1>
+                <h1 style={{ textAlign: 'center' }}>{title}</h1>
             </ImagenPortadaStyled>
         </>
     );

@@ -11,15 +11,18 @@ export const ImagenPortadaStyled = styled.div`
     align-items: center;
     justify-items: center;
     color: ${props => props.textColor};
+    font-size: 40pt;
 
     @media screen and (max-width: 768px) {
         height: ${props => props.heightOniPad}; 
         background-position-y: ${props => props.yOffSiteIPad};
+        font-size: 16pt;
     }
 
     @media screen and (max-width: 420px) {
         height: ${props => props.heightOnIPhone};
         background-position-y: ${props => props.yOffSiteiPhone};
+        font-size: 14pt;
     }
 
 `;
