@@ -4,9 +4,14 @@
   src: local('SpecialElite'), url(./fonts/SpecialElite-Regular.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Myriad';
+  src: local('Myriad'), url(./fonts/MYRIADPRO-REGULAR.OTF) format('truetype');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Myriad', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
