@@ -13,8 +13,11 @@ export const CirculoComidaStyled = styled.div`
     }
 
     @media screen and (max-width: 420px) {
-        width: 45%;
+        width: 40%;
         padding: 0px;
+        padding-right: 4%;
+        padding-left: 4%;
+        font-size: 10pt;
     }
 
 `;

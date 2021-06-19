@@ -25,7 +25,7 @@ export const CicrulosComidasListStyled = styled.div`
         align-items: flex-end;
         align-content: flex-end;
         flex-direction: column;
-        text-align: unset;
+        text-align: center;
     }
 `;
 
@@ -137,5 +137,18 @@ export const H1TipoAntojoiPhoneSize = styled.h1`
         display: block;
         text-align: center;
         font-family: 'SpecialElite';
+    }
+`;
+
+export const H1EncuentraLoQue = styled.h1`
+    font-size: 25pt;
+    margin-top: 0px;
+`;
+
+export const ContainerLoQueNecesites = styled.div`
+    margin-top: 60px;
+
+    @media screen and (max-width: 420px) {
+        margin-top: 10px;
     }
 `;

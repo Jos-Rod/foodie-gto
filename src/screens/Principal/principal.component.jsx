@@ -11,7 +11,7 @@ import imgPasta from '../../imgs/especialesSemana/pasta.jpg';
 import imgAlitas from '../../imgs/especialesSemana/alitas.jpeg';
 import imgCeviche from '../../imgs/especialesSemana/ceviche.jpg';
 import imgTostada from '../../imgs/especialesSemana/tostada.jpg';
-import { CicrulosComidasListStyled, ContainerPrincipalBienvenido, H1TipoAntojoiPhoneSize, H1TipoAntojo, ContenedorTituloBienvenido, ImagenEspecialSemana, ImagenEspecialSemanaList, ImagenLogoCentro, ImagenPortada } from './principal.styling';
+import { CicrulosComidasListStyled, ContainerPrincipalBienvenido, ContainerLoQueNecesites, H1TipoAntojoiPhoneSize, H1EncuentraLoQue, H1TipoAntojo, ContenedorTituloBienvenido, ImagenEspecialSemana, ImagenEspecialSemanaList, ImagenLogoCentro, ImagenPortada } from './principal.styling';
 import Footer from '../../components/Footer/Footer.component';
 
 function Principal() {
@@ -44,10 +44,10 @@ function Principal() {
                 </ContainerPrincipalBienvenido>
             </section>
             {/* Seccion de encuentra lo que necesites */}
-            <section title="Encuentra lo que necesites" style={{ marginTop: '60px' }}>
+            <ContainerLoQueNecesites title="Encuentra lo que necesites">
                 <div >
                     <div style={{ textAlign: 'center' }}>
-                        <h1 style={{ fontSize: '25pt' }}>Encuentra lo que necesites</h1>
+                        <H1EncuentraLoQue >Encuentra lo que necesites</H1EncuentraLoQue>
                     </div>
                     <CicrulosComidasListStyled >
                         {
@@ -57,7 +57,7 @@ function Principal() {
                         }
                     </CicrulosComidasListStyled>
                 </div>
-            </section>
+            </ContainerLoQueNecesites>
             {/* Seccion de Pregunta por los especiales de la semana */}
             <section title="Pregunta por los especiales de la semana" style={{ marginTop: '60px' }}>
                 <div >
