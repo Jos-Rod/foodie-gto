@@ -139,6 +139,12 @@ export const DetalleTorta = styled.div`
     height: 35vh;
     display: flex;
     overflow: hidden;
+
+    @media screen and (max-width: 420px) {
+        flex-direction: column-reverse;
+        height: 80vh;
+        justify-content: flex-end;
+    }
 `;
 
 export const ContenedorImagenTorta = styled.div`
@@ -149,6 +155,15 @@ export const ContenedorImagenTorta = styled.div`
     height: 0;
     padding-bottom: 100%;
     margin-right: 0px;
+
+    @media screen and (max-width: 420px) {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 0%;
+        background-size: cover;
+        z-index: 1;
+        margin-top: -30px;
+    }
 `;
 
 export const ContenedorNegro = styled.div`
@@ -156,14 +171,32 @@ export const ContenedorNegro = styled.div`
     padding-right: 20%;
     padding-left: 20%;
     height: 50%;
+    color: white;
 
     @media screen and (max-width: 768px) {
         height: 65%;
+    }
+
+    @media screen and (max-width: 420px) {
+        height: 100%;
+        width: 85%;
+        padding-right: 0%;
+        padding-left: 0%;
+        z-index: 2;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 `;
 
 export const ContenedorDetalleTortas = styled.div`
     width: 50%;
+
+    @media screen and (max-width: 420px) {
+        width: 100%;
+    }
 `;
 
 export const ContenedorTortasLista = styled.div`
@@ -175,6 +208,11 @@ export const ContenedorTortasLista = styled.div`
     padding-right: 20%;
     align-items: center;
     align-content: center;
+
+    @media screen and (max-width: 420px) {
+        width: 80%;
+        padding-right: 0%;
+    }
 `;
 
 export const DescripcionTortaPrecio = styled.p`
@@ -236,5 +274,12 @@ export const ContenedorImagenChild = styled.div`
         margin-left: 0px;
         width: 100%;
         height: 100%;
+    }
+`;
+
+export const DivDivisor = styled.div`
+    height: 100px;
+    @media screen and (max-width: 420px) {
+        height: 10px;
     }
 `;

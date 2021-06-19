@@ -4,7 +4,7 @@ import imagenDesayunosPhoneSize from '../../imgs/desayunosYAlmuerzos.jpg';
 import imagenTorta from '../../imgs/torta.jpg';
 import ThemeContext from '../../providers/Theme/Theme.provider';
 import ContenedorListaConPrecio from '../ContenedorListaConPrecio';
-import { TablaDesayunos, TablaTorta, DetalleTorta, SuperiorRadius, H1Desayuno, ImagenDesayunoPhoneSize, ContenedorImagenChild, ContainerListaDesayunosParent, H1DesayunoPhoneSize, PDesayunos, ContenedorNegro, DescripcionTortaPrecio, ContenedorTortasLista, ContenedorDetalleTortas, DetalleAlmuerzos, ContenedorImagenTorta, ContainerDesayunosLista, DescripcionDesayunoPrecio, CuadroBlanco, DescripcionDesayuno, ContenedorImagen, TituloDesayuno, ImagenDesayuno } from './Desayunos.styling';
+import { TablaDesayunos, TablaTorta, DetalleTorta, SuperiorRadius, DivDivisor, H1Desayuno, ImagenDesayunoPhoneSize, ContenedorImagenChild, ContainerListaDesayunosParent, H1DesayunoPhoneSize, PDesayunos, ContenedorNegro, DescripcionTortaPrecio, ContenedorTortasLista, ContenedorDetalleTortas, DetalleAlmuerzos, ContenedorImagenTorta, ContainerDesayunosLista, DescripcionDesayunoPrecio, CuadroBlanco, DescripcionDesayuno, ContenedorImagen, TituloDesayuno, ImagenDesayuno } from './Desayunos.styling';
 
 const desayunosAlmuerzosLabel = [
     { title: 'Cuatro hotcakes con maple', precio: '$45' },
@@ -55,26 +55,18 @@ const Desayunos = () => {
                     </ContenedorImagenChild>
                 </ContenedorImagen>
             </DetalleAlmuerzos>
-            <div style={{ height: '100px' }}></div>
+            <DivDivisor />
             <DetalleTorta>
                 <ContenedorImagenTorta img={imagenTorta}></ContenedorImagenTorta>
                 <ContenedorDetalleTortas>
-                    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                         <h1 className="title" style={{ textAlign: 'center' }}>¡Qué tortas!</h1>
                         <ContenedorNegro>
-                            <ContenedorTortasLista style={{ textAlign: 'center', color: 'white' }}>
-                                {
-                                    tortasLabels.map(e => {
-                                        return (
-                                            <TablaTorta>
-                                                <DescripcionTortaPrecio className="fontFSpecialElite">{e.title}</DescripcionTortaPrecio>
-                                                <DescripcionTortaPrecio className="fontFSpecialElite">{e.precio}</DescripcionTortaPrecio>
-                                            </TablaTorta>
-                                        )
-                                    })
-                                }
+                            <ContenedorTortasLista >
+                                <ContenedorListaConPrecio lista={tortasLabels} />
                                 <DescripcionTortaPrecio style={{ marginTop: '25px' }} className="fontFSpecialElite">Todas incluyen: mayonesa, aderezo <br /> picoso, lechuga, jitomate y aguacate</DescripcionTortaPrecio>
                             </ContenedorTortasLista>
+                            
 
                         </ContenedorNegro>
                     </div>
