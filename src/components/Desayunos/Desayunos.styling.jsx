@@ -2,19 +2,29 @@ import styled from 'styled-components';
 
 export const DetalleAlmuerzos = styled.div`
     background-color: ${props => props.color};
-    height: 60vh;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    padding-top: 15vh;
+    height: 50vh;
+    display: flex;
+    padding-bottom: 10vh;
+    min-height: 375px;
 
-    @media screen and (max-width: 768px) {
-        height: 45vh;
-        padding-top: 5vh;
-    }
+    display: flex;
+    flex-direction: column;
 
     @media screen and (max-width: 420px) {
-        height: 100vh;
-        width: 100%;
+        height: 70vh;
+        padding-bottom: 0vh;
+    }
+`;
+
+export const SuperiorRadius = styled.div`
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    height: 20vh;
+    width: 100%;
+    background-color: ${props => props.color};
+
+    @media screen and (max-width: 420px) {
+        height: 5vh;
     }
 `;
 
@@ -22,20 +32,21 @@ export const DescripcionDesayuno = styled.div`
     width: 50%;
     text-align: center;
     overflow: hidden;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media screen and (max-width: 420px) {
         width: 100%;
-        height: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        height: 100%;
     }
 `;
 
 export const TituloDesayuno = styled.h1`
     text-align: center;
     font-size: 30pt;
+    margin: 0px;
+    margin-top: 20px;
     
     @media screen and (max-width: 768px) {
         margin: 0px;
@@ -48,7 +59,7 @@ export const ContenedorImagen = styled.div`
 
     @media screen and (max-width: 420px) {
         width: 100%;
-        height: 46%;
+        height: 60%;
         margin-top: 10px;
     }
 `;
@@ -75,52 +86,31 @@ export const ImagenDesayunoPhoneSize = styled.div`
     height: 100%;
     /* margin-top: -30px; */
     /* position: absolute; */
+    display: none;
 
     @media screen and (max-width: 420px) {
-        background-size: contain;
+        background-size: cover;
+        display: block;
+
     }
 `;
 
 export const CuadroBlanco = styled.div`
     background-color: white;
-    margin-left: 40px;
-    /* padding: 20px; */
-    position: absolute;
-    bottom: 40px;
-    top: 150px;
-    width: 100%;
-
-    @media screen and (max-width: 768px) {
-        top: 120px;
-    }
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
 
     @media screen and (max-width: 420px) {
-        top: 110px;
-        width: 90%;
-        margin-left: 0px;
-        height: 90%;
-        bottom: 0px;
+        background-size: contain;
+        height: 100%;
     }
 `;
 
 export const ContainerDesayunosLista = styled.div`
-    margin-left: 40px;
-    width: 60%;
+    width: 100%;
     height: 80%;
-    display: grid;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    text-align: left;
-    position: absolute;
-    top: 60px;
-    bottom: '';
-
-    @media screen and (max-width: 420px) {
-        margin-left: 13px;
-        width: 90%;
-        top: 0px;
-    }
 `;
 
 export const TablaDesayunos = styled.div`
@@ -226,13 +216,12 @@ export const PDesayunos = styled.p`
 `;
 
 export const ContainerListaDesayunosParent = styled.div`
-    padding-left: 20px;
-    width: 70%;
+    width: 85%;
     height: 100%;
 
     @media screen and (max-width: 420px) {
-        padding-left: 0px;
-        width: 100%;
+        display: flex;
+        align-items: center;
     }
 `;
 
