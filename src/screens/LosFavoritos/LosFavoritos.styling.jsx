@@ -147,11 +147,7 @@ export const CirculosiPhone = styled.div`
     justify-content: space-around;
     display: none;
     width: 30%;
-    
-    @media screen and (max-width: 768px) {
-        visibility: visible;
-        display: flex;
-    }
+
 
     @media screen and (max-width: 420px) {
         width: 100%;

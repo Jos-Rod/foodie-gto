@@ -14,6 +14,7 @@ export const CicrulosComidasListStyled = styled.div`
         justify-items: center;
         text-align: center;
         width: 100%;
+        margin-bottom: 0px;
     }
 
     @media screen and (max-width: 420px) {
@@ -61,8 +62,10 @@ export const ImagenPortada = styled.div`
     position: relative;
 
     @media screen and (max-width: 768px) {
+        margin-top: 50px;
         background-size: 100%;
-        height: 90vh;
+        height: 60vh;
+        background-position: center;
     }
 
     @media screen and (max-width: 420px) {
@@ -96,6 +99,11 @@ export const ImagenLogoCentro = styled.div`
 `;
 
 export const ContainerPrincipalBienvenido = styled.div`
+
+    @media screen and (max-width: 768px) {
+        height: 60vh;
+    }
+
     @media screen and (max-width: 420px) {
         margin-top: 40%;
         height: 50vh;

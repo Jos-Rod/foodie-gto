@@ -52,7 +52,8 @@ function Principal() {
                     <CicrulosComidasListStyled >
                         {
                             listaComidaCirculos.map(e => {
-                                return e.title != "Especiales" ? <CirculoComida title={e.title} img={e.img}></CirculoComida> : <> <br/> <CirculoComida title={e.title} img={e.img}></CirculoComida> </>
+                                return <CirculoComida title={e.title} img={e.img}></CirculoComida>
+                                // return e.title != "Especiales" ? <CirculoComida title={e.title} img={e.img}></CirculoComida> : <> <br/> <CirculoComida title={e.title} img={e.img}></CirculoComida> </>
                             })
                         }
                     </CicrulosComidasListStyled>

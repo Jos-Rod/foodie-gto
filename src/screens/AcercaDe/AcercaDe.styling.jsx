@@ -220,8 +220,15 @@ export const ContenedorNegroDescripcion = styled.div`
 `;
 
 export const PDescripcionPuebloMagico = styled.p`
-    display: ${props => props.onlyOnPhoneSize ? 'block' : 'none'};
-   
+    display: ${props => props.onlyOnPhoneSize ? 'none' : 'block'};
+    /* font-size: 8pt; */
+
+    @media screen and (max-width: 768px) {
+        width: 85%;
+        margin-top: -10%;
+        margin-left: 5%;
+        font-size: 9pt;
+    }
 
     @media screen and (max-width: 420px) {
         display: ${props => props.onlyOnPhoneSize ? 'block' : 'none'};

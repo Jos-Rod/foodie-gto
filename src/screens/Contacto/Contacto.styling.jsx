@@ -7,7 +7,7 @@ export const ContenedorGeneral = styled.div`
     min-height: 600px;
 
     @media screen and (max-width: 768px) {
-        height: 60vh;
+        height: 70vh;
     }
 
     @media screen and (max-width: 420px) {
@@ -68,6 +68,14 @@ export const ContenedorInputs = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 768px) {
+        height: 55%;
+    }
+
+    @media screen and (max-width: 420px) {
+        height: 70%;
+    }
 `;
 
 export const ContenedorInputContacto = styled.div`
