@@ -43,7 +43,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <div style={{ position: 'relative' }}>
-              <Principal />
+              <Principal changeTitle={changeTitle} />
               <Footer />
             </div>
           </Route>

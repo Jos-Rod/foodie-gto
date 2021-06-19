@@ -13,15 +13,16 @@ import imgCeviche from '../../imgs/especialesSemana/ceviche.jpg';
 import imgTostada from '../../imgs/especialesSemana/tostada.jpg';
 import { CicrulosComidasListStyled, ContainerPrincipalBienvenido, ContainerLoQueNecesites, H1TipoAntojoiPhoneSize, H1EncuentraLoQue, H1TipoAntojo, ContenedorTituloBienvenido, ImagenEspecialSemana, ImagenEspecialSemanaList, ImagenLogoCentro, ImagenPortada } from './principal.styling';
 import Footer from '../../components/Footer/Footer.component';
+import { Link } from 'react-router-dom';
 
-function Principal() {
+function Principal({ changeTitle }) {
 
     const listaComidaCirculos = [
-        { title: 'Desayunos y almuerzos', img: desayunosYAlmuerzos },
-        { title: 'Hamburguesas', img: hamburguesas },
-        { title: 'Especiales', img: especiales },
-        { title: 'Los favoritos', img: losFavoritos },
-        { title: 'Bebidas', img: bebidas },
+        { title: 'Desayunos y almuerzos', img: desayunosYAlmuerzos, linkTo: '/menu' },
+        { title: 'Hamburguesas', img: hamburguesas, linkTo: '/menu' },
+        { title: 'Especiales', img: especiales, linkTo: '/menu' },
+        { title: 'Los favoritos', img: losFavoritos, linkTo: '/favoritos' },
+        { title: 'Bebidas', img: bebidas, linkTo: '/bebidas' },
     ];
 
     const imagenesEspecialesDeLaSemana = [imgPasta, imgCeviche, imgTostada, imgAlitas];
@@ -52,7 +53,7 @@ function Principal() {
                     <CicrulosComidasListStyled >
                         {
                             listaComidaCirculos.map(e => {
-                                return <CirculoComida title={e.title} img={e.img}></CirculoComida>
+                                return <Link to={e.linkTo} key={e.linkTo} style={{ textDecoration: 'none', color: 'inherit' }} onClick={() => changeTitle(e.linkTo)}><CirculoComida title={e.title} img={e.img}></CirculoComida></Link>
                                 // return e.title != "Especiales" ? <CirculoComida title={e.title} img={e.img}></CirculoComida> : <> <br/> <CirculoComida title={e.title} img={e.img}></CirculoComida> </>
                             })
                         }
