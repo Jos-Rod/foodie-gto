@@ -12,7 +12,6 @@ export const ContenedorGeneralBebidas = styled.div`
 
     @media screen and (max-width: 420px) {
         margin-top: 0px;
-        background-color: purple;
     }
 `;
 

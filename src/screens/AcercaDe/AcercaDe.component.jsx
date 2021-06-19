@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContenedorPrimeraDescripcion, ContenedorNegroDescripcion, ImagenPuebloMagico, ContenedorDescripcionPuebloMagico, ContenedorTituloPuebloMagico, DivBlanco, ContenedorCaracteristicas, CaracteristicaImagen, CaracteristicaStyle, ContenedorDescripcionP, LogoFoodie, ContenedorDescripcionFoodie, ContenedorDescripcionImagen } from './AcercaDe.styling';
+import { ContenedorPrimeraDescripcion, ContenedorNegroDescripcion, PDescripcionPuebloMagico, ImagenPuebloMagico, ContenedorDescripcionPuebloMagico, ContenedorTituloPuebloMagico, DivBlanco, ContenedorCaracteristicas, CaracteristicaImagen, CaracteristicaStyle, ContenedorDescripcionP, LogoFoodie, ContenedorDescripcionFoodie, ContenedorDescripcionImagen } from './AcercaDe.styling';
 import imagenDescripcion from '../../imgs/fideos.jpg';
 import imagenPuebloMagico from '../../imgs/puebloMagico.jpg';
 import imagenLogo from '../../imgs/logo.png';
@@ -47,7 +47,7 @@ const AcercaDe = () => {
                 </ContenedorDescripcionFoodie>
                 <ContenedorDescripcionImagen img={imagenDescripcion} />
             </ContenedorPrimeraDescripcion>
-            <ImagenPortadaPaginas heightOniPad='37vh' withMarginTop={false} height='60vh' title='Nos distinguimos por' img={imagenNosDistinguimosPor} />
+            <ImagenPortadaPaginas heightOnIPhone='70vh' heightOniPad='37vh' withMarginTop={false} height='60vh' title='Nos distinguimos por' img={imagenNosDistinguimosPor} />
             <ContenedorCaracteristicas>
                 {
                     listaCaracteristicas.map(e => {
@@ -64,13 +64,20 @@ const AcercaDe = () => {
             <ContenedorDescripcionPuebloMagico>
                 <ImagenPuebloMagico img={imagenPuebloMagico} />
                 <ContenedorNegroDescripcion>
-                    <p style={{display: 'block', paddingBottom: '5vh'}}>
+                    <PDescripcionPuebloMagico>
                         Nos encontramos ubicados en el pueblo Mágico de Yuriria Gto. una ciudad <br />
                         fundada en 1540 por agustinos y esta se encuentra en el sur del estado. <br />
                         Un dato interesante es el nombre de nuestra ciudad: <br />
                         Yuriria es un nombre de origen purépecha, derivado de "Yuririapúndaro", <br />
                         vocablo que significa "Lago de sangre"
-                    </p>
+                    </PDescripcionPuebloMagico>
+                    <PDescripcionPuebloMagico onlyOnPhoneSize >
+                        Nos encontramos ubicados en el pueblo Mágico  de Yuriria Gto. una ciudad 
+                        fundada en 1540 por agustinos y esta se  encuentra en el sur del estado. 
+                        Un dato interesante es el nombre de nuestra ciudad: 
+                        Yuriria es un nombre de origen purépecha, derivado de "Yuririapúndaro", 
+                        vocablo que significa "Lago de sangre"
+                    </PDescripcionPuebloMagico>
                 </ContenedorNegroDescripcion>
             </ContenedorDescripcionPuebloMagico>
             {/* <div style={{height: '5vh'}}></div> */}
