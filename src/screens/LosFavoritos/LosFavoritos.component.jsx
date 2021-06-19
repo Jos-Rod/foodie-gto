@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import imagenBoneless from '../../imgs/boneless.jpg';
 import imagenLosFavoritos from '../../imgs/losFavoritos.jpeg';
 import ImagenPortadaPaginas from '../../components/ImagenPortadaPaginas/ImagenPortadaPaginas.component';
-import { TituloSnacks, ContenedorImagen, CirculosIPad, ContenedorSalsas, CirculosDesktop, DescripcionSalsa, CirculoSalsa, ContenedorListaFavoritos, ContenedorFavoritos, ContenedorFavoritosEImagen } from './LosFavoritos.styling';
+import { TituloSnacks, ContenedorImagen, CirculosIPad, H1Salsas, CirculosiPhone, ContenedorSalsas, CirculosDesktop, DescripcionSalsa, CirculoSalsa, ContenedorListaFavoritos, ContenedorFavoritos, ContenedorFavoritosEImagen } from './LosFavoritos.styling';
 import ContenedorListaConPrecio from '../../components/ContenedorListaConPrecio/ContenedorListaConPrecio.component';
 // import './auxJS';
 
@@ -64,7 +64,7 @@ const LosFavoritos = () => {
             </ContenedorFavoritosEImagen>
 
             <ContenedorSalsas>
-                <h1 className="title centered">Puedes elegir la salsa de tu preferencia</h1>
+                <H1Salsas className="title centered">Puedes elegir la salsa de tu preferencia</H1Salsas>
                 <CirculosDesktop>
                     <div style={{ width: '20%' }}>
                         <CirculoSalsa className="CirculoSalsa" color='#D40029'>
@@ -128,6 +128,51 @@ const LosFavoritos = () => {
                         </CirculoSalsa>
                     </div>
                 </CirculosIPad>
+                <CirculosiPhone>
+                    <div style={{ width: '100%', height: '25%', display: 'flex' }}>
+                        <div style={{ height: '100%', width: '50%', display: 'flex', justifyContent: 'center' }}>
+                            <CirculoSalsa className="CirculoSalsa" color='#D40029'>
+                                <DescripcionSalsa>Buffalo</DescripcionSalsa>
+                            </CirculoSalsa>
+                        </div>
+                        <div style={{ height: '100%', width: '50%', display: 'flex', justifyContent: 'center' }}>
+                            <CirculoSalsa className="CirculoSalsa" color='#E97600' >
+                                <DescripcionSalsa>BB Habanero</DescripcionSalsa>
+                            </CirculoSalsa>
+                        </div>
+                    </div>
+                    <div style={{ width: '100%', height: '25%', display: 'flex' }}>
+                        <div style={{ height: '100%', width: '50%', display: 'flex', justifyContent: 'center' }}>
+                            <CirculoSalsa className="CirculoSalsa" color='#BF5000'>
+                                <DescripcionSalsa>BBQ Hot</DescripcionSalsa>
+                            </CirculoSalsa>
+                        </div>
+                        <div style={{ height: '100%', width: '50%', display: 'flex', justifyContent: 'center' }}>
+                            <CirculoSalsa className="CirculoSalsa" color='#6A2C00'>
+                                <DescripcionSalsa>BBQ</DescripcionSalsa>
+                            </CirculoSalsa>
+                        </div>
+                    </div>
+                    <div style={{ width: '100%', height: '25%', display: 'flex' }}>
+                        <div style={{ height: '100%', width: '50%', display: 'flex', justifyContent: 'center' }}>
+                            <CirculoSalsa className="CirculoSalsa" color='#FFF6BF' >
+                                <DescripcionSalsa>Ajo Parmesano</DescripcionSalsa>
+                            </CirculoSalsa>
+                        </div>
+                        <div style={{ height: '100%', width: '50%', display: 'flex', justifyContent: 'center' }}>
+                            <CirculoSalsa className="CirculoSalsa" color='#D47700'>
+                                <DescripcionSalsa>Tamarindo</DescripcionSalsa>
+                            </CirculoSalsa>
+                        </div>
+                    </div>
+                    <div style={{ width: '100%', height: '25%', display: 'flex', justifyContent: 'center' }}>
+                        <div style={{ height: '100%', width: '50%', display: 'flex', justifyContent: 'center', }}>
+                            <CirculoSalsa className="CirculoSalsa" color='#FFF63C'>
+                                <DescripcionSalsa>Lemon Pepper</DescripcionSalsa>
+                            </CirculoSalsa>
+                        </div>
+                    </div>
+                </CirculosiPhone>
             </ContenedorSalsas>
             <div style={{ height: '15vh' }}></div>
         </>

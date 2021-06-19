@@ -16,4 +16,10 @@ export const ImagenPortadaStyled = styled.div`
         height: ${props => props.heightOniPad}; 
         background-position-y: ${props => props.yOffSiteIPad};
     }
+
+    @media screen and (max-width: 420px) {
+        height: ${props => props.heightOnIPhone};
+        background-position-y: ${props => props.yOffSiteiPhone};
+    }
+
 `;
