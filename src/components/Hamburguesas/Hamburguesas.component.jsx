@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListaHamburguesasEspeciales, ContainerHamburguesas, DescripcionTemporadaP, ContenedorImagenHamburguesa, ContenedorDeTemporada, ContenedorImagenDeTemporada, ContenedorNegro, ContenedorDeTemporadaDescripcion, ListaHamburguesasBasicas, CirculoHamburguesa, CirculoHamburguesaImagen } from './Hamburguesas.styling';
+import { ListaHamburguesasEspeciales, ContenedorCualElegirias, ContainerHamburguesas, DescripcionTemporadaP, ContenedorImagenHamburguesa, ContenedorDeTemporada, ContenedorImagenDeTemporada, ContenedorNegro, ContenedorDeTemporadaDescripcion, ListaHamburguesasBasicas, CirculoHamburguesa, CirculoHamburguesaImagen } from './Hamburguesas.styling';
 import ContenedorListaConPrecio from '../ContenedorListaConPrecio/ContenedorListaConPrecio.component';
 import hamburguesaCentro from '../../imgs/hamburguesaCentro.jpeg';
 import hamburguesaChickenSupreme from '../../imgs/hamburguesaChickenSupreme.jpeg';
@@ -32,7 +32,15 @@ const Hamburguesas = () => {
                 </ListaHamburguesasBasicas>
             </ContainerHamburguesas>
             {/* Cual elegirias? */}
-            <div style={{ marginTop: '100px', display: 'flex', justifyContent: 'center' }}>
+            <ContenedorCualElegirias >
+                <CirculoHamburguesa showOnlyOnPhone>
+                    <div style={{ height: '10vh', display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
+                        <h1 className="fontFSpecialElite" style={{ textAlign: 'center' }}>¿Cuál elegirías?</h1>
+                    </div>
+                    <ContenedorImagenHamburguesa >
+                        <CirculoHamburguesaImagen img={hamburguesaCentro} />
+                    </ContenedorImagenHamburguesa>
+                </CirculoHamburguesa>
                 <CirculoHamburguesa>
                     <div style={{ height: '10vh', display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>
                         <h2 className="fontFSpecialElite" style={{ textAlign: 'center' }}>Chicken supreme</h2>
@@ -41,7 +49,7 @@ const Hamburguesas = () => {
                         <CirculoHamburguesaImagen img={hamburguesaChickenSupreme} />
                     </ContenedorImagenHamburguesa>
                 </CirculoHamburguesa>
-                <CirculoHamburguesa>
+                <CirculoHamburguesa hiddenOnPhone>
                     <div style={{ height: '10vh', display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
                         <h1 className="fontFSpecialElite" style={{ textAlign: 'center' }}>¿Cuál elegirías?</h1>
                     </div>
@@ -57,16 +65,16 @@ const Hamburguesas = () => {
                         <CirculoHamburguesaImagen img={hamburguesaSupreme} />
                     </ContenedorImagenHamburguesa>
                 </CirculoHamburguesa>
-            </div>
+            </ContenedorCualElegirias>
             {/* De temporada */}
             <ContenedorDeTemporada>
                 <ContenedorDeTemporadaDescripcion>
                     <ContenedorNegro>
                         <h1 style={{ paddingLeft: '20%', width: '100%' }}>De temporada...</h1>
-                        <DescripcionTemporadaP className="fontFSpecialElite">No te pierdas las Hamburguesas 
-                            <br/> que preparamos en cada festividad 
-                            <br/>¡Preparadas con ingredientes o 
-                            <br/> temáticas diferentes!</DescripcionTemporadaP>
+                        <DescripcionTemporadaP className="fontFSpecialElite">No te pierdas las Hamburguesas
+                            <br /> que preparamos en cada festividad
+                            <br />¡Preparadas con ingredientes o
+                            <br /> temáticas diferentes!</DescripcionTemporadaP>
                     </ContenedorNegro>
                 </ContenedorDeTemporadaDescripcion>
                 <ContenedorImagenDeTemporada img={imagenTemporada}>

@@ -9,6 +9,10 @@ export const ContainerHamburguesas = styled.div`
         display: block;
         width: 100%;
     }
+
+    @media screen and (max-width: 420px) {
+        height: 50vh;
+    }
 `;
 
 export const ListaHamburguesasEspeciales = styled.div`
@@ -45,6 +49,12 @@ export const ListaHamburguesasBasicas = styled.div`
 
 export const CirculoHamburguesa = styled.div`
     width: 30%;
+    display: ${props => props.showOnlyOnPhone ? 'none' : 'block'};
+
+    @media screen and (max-width: 420px) {
+        width: 100%;
+        display: ${props => props.hiddenOnPhone ? 'none' : 'block'};
+    }
 `;
 
 export const CirculoHamburguesaImagen = styled.div`
@@ -56,6 +66,10 @@ export const CirculoHamburguesaImagen = styled.div`
     height: 0;
     padding-bottom: 100%;
     border-radius: 50%;
+
+    @media screen and (max-width: 420px) {
+        width: 100%;
+    }
 `;
 
 export const ContenedorDeTemporada = styled.div`
@@ -106,6 +120,10 @@ export const ContenedorImagenHamburguesa = styled.div`
     @media screen and (max-width: 768px) {
         width: 85%;
     }
+
+    @media screen and (max-width: 420px) {
+        width: 50%;
+    }
 `;
 
 export const DescripcionTemporadaP = styled.h2`
@@ -115,5 +133,15 @@ export const DescripcionTemporadaP = styled.h2`
 
     @media screen and (max-width: 768px) {
         font-size: 15pt;
+    }
+`;
+
+export const ContenedorCualElegirias = styled.div`
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 420px) {
+        flex-direction: column;
     }
 `;
