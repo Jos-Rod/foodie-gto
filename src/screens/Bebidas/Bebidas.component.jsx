@@ -10,7 +10,7 @@ import imagenSmoothieFresa from '../../imgs/bebidas/smoothieFresa.jpg';
 import imagenSmoothieChicle from '../../imgs/bebidas/smoothieChicle.jpg';
 import imagenSmoothieTaro from '../../imgs/bebidas/smoothieTaro.jpg';
 import imagenCafe from '../../imgs/bebidas/cafe.jpg';
-import { ContenedorGeneralBebidas, ContenedorOtrasBebidas, ContenedorOtrasBebidasImagen, ContenedorOtrasBebidasEImagen, ImagenBebidaStyle, ContenedorBebidaStyle, ContenedorNegro, ContenedorInformacion } from './Bebidas.styling';
+import { ContenedorGeneralBebidas, ContenedorOtrasBebidas, ContenedorListaBebidas, H1DisfrutalasFrias, PBebidaTitle, ContenedorOtrasBebidasImagen, ContenedorOtrasBebidasEImagen, ImagenBebidaStyle, ContenedorBebidaStyle, ContenedorNegro, ContenedorInformacion } from './Bebidas.styling';
 import  ContenedorListaConPrecio from '../../components/ContenedorListaConPrecio';
 
 const listaBebidas = [
@@ -36,7 +36,7 @@ const ContenedorBebida = ({ title, img }) => {
         <>
             <ContenedorBebidaStyle>
                 <ImagenBebidaStyle title={title} img={img} />
-                <p style={{ marginTop: '10px' }}>{title}</p>
+                <PBebidaTitle style={{ marginTop: '10px' }}>{title}</PBebidaTitle>
             </ContenedorBebidaStyle>
         </>
     )
@@ -46,10 +46,11 @@ const Bebidas = () => {
     return (
         <>
             <ImagenPortadaPaginas img={imagenPortada} yOffSiteIPad='30%' title='Las Bebidas' textColor='black' />
+            <H1DisfrutalasFrias onPhoneSize className="title">Disfrútalas bien <br /> frías por sólo $45</H1DisfrutalasFrias>
             <ContenedorGeneralBebidas>
                 <ContenedorNegro />
                 <ContenedorInformacion>
-                    <h1 className="title">Disfrútalas bien frías por sólo $45</h1>
+                    <H1DisfrutalasFrias className="title">Disfrútalas bien frías por sólo $45</H1DisfrutalasFrias>
                     <div style={{ display: 'contents', height: '100%' }}>
                         {
                             listaBebidas.map(e => {
@@ -64,9 +65,9 @@ const Bebidas = () => {
             <ContenedorOtrasBebidasEImagen>
                 <ContenedorOtrasBebidas>
                         <h1 className="centered" style={{margin: '0px', marginBottom: '20px'}}>Otras bebidas</h1>
-                        <div style={{ display: 'block', width: '70%' }}>
-                        <ContenedorListaConPrecio lista={listaBebidasLabelsPrecios} />
-                        </div>
+                        <ContenedorListaBebidas>
+                            <ContenedorListaConPrecio childrenWithMargin={true} lista={listaBebidasLabelsPrecios} />
+                        </ContenedorListaBebidas>
                 </ContenedorOtrasBebidas>
                 <ContenedorOtrasBebidasImagen img={imagenCafe} />
             </ContenedorOtrasBebidasEImagen>

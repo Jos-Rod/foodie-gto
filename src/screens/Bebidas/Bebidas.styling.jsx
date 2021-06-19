@@ -9,14 +9,23 @@ export const ContenedorGeneralBebidas = styled.div`
     @media screen and (min-width: 1500px) {
         min-height: 1100px;
     }
+
+    @media screen and (max-width: 420px) {
+        margin-top: 0px;
+        background-color: purple;
+    }
 `;
 
 export const ContenedorNegro = styled.div`
     background-color: #1D1D1B;
-    height: 37%;
+    height: 30%;
     width: 100%;
     position: absolute;
     top: 0px;
+
+    @media screen and (max-width: 420px) {
+        margin-top: 20px;
+    }
 `;
 
 export const ContenedorInformacion = styled.div`
@@ -47,6 +56,11 @@ export const ContenedorBebidaStyle = styled.div`
         width: 30%;
     }
 
+    @media screen and (max-width: 420px) {
+        width: 100%;
+        height: 50%;
+    }
+
 `;
 
 export const ImagenBebidaStyle = styled.div`
@@ -56,6 +70,11 @@ export const ImagenBebidaStyle = styled.div`
     background-position: center;
     width: 80%;
     height: 70%;
+    
+    @media screen and (max-width: 420px) {
+        /* width: 100%; */
+        height: 80%;
+    }
 `;
 
 export const ContenedorOtrasBebidasEImagen = styled.div`
@@ -66,6 +85,17 @@ export const ContenedorOtrasBebidasEImagen = styled.div`
     @media screen and (max-width: 768px) {
         margin-top: 400px;
         height: 40vh;
+    }
+
+    @media screen and (max-width: 420px) {
+        margin-top: 330vh;
+    }
+
+    @media screen and (max-width: 376px) {
+        margin-top: 300vh;
+        flex-direction: column;
+        margin-bottom: -35%;
+        height: 55vh;
     }
 `;
 
@@ -85,6 +115,13 @@ export const ContenedorOtrasBebidas = styled.div`
         width: 60%;
         height: 70%;
     }
+
+    @media screen and (max-width: 420px) {
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 7%;
+    }
 `;
 
 export const ContenedorOtrasBebidasImagen = styled.div`
@@ -98,5 +135,40 @@ export const ContenedorOtrasBebidasImagen = styled.div`
     @media screen and (max-width: 768px) {
         width: 40%;
         background-position-x: 57%;
+    }
+
+    @media screen and (max-width: 420px) {
+        display: none;
+    }
+`;
+
+export const H1DisfrutalasFrias = styled.h1`
+    display: ${props => props.onPhoneSize ? 'none' : 'block' };
+
+    @media screen and (max-width: 420px) {
+        display: ${props => props.onPhoneSize ? 'block' : 'none' };
+        color: black;
+        width: 100%;
+        text-align: center;
+        margin-top: 10%;
+        font-size: 25pt;
+        line-height: 1.3;
+    }
+`;
+
+export const PBebidaTitle = styled.p`
+    margin-top: 10px;
+    
+    @media screen and (max-width: 420px) {
+        font-size: 18pt;
+    }
+`;
+
+export const ContenedorListaBebidas = styled.div`
+    display: block;
+    width: 70%;
+    @media screen and (max-width: 420px) {
+        height: 45%;
+        min-height: 127px;
     }
 `;
