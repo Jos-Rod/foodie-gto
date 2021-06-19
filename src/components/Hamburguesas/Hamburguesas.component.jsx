@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListaHamburguesasEspeciales, ContenedorCualElegirias, ContainerHamburguesas, DescripcionTemporadaP, ContenedorImagenHamburguesa, ContenedorDeTemporada, ContenedorImagenDeTemporada, ContenedorNegro, ContenedorDeTemporadaDescripcion, ListaHamburguesasBasicas, CirculoHamburguesa, CirculoHamburguesaImagen } from './Hamburguesas.styling';
+import { ListaHamburguesasEspeciales, ContenedorCualElegirias, DivInferior, ContainerHamburguesas, H1DeTemporada, DescripcionTemporadaP, ContenedorImagenHamburguesa, ContenedorDeTemporada, ContenedorImagenDeTemporada, ContenedorNegro, ContenedorDeTemporadaDescripcion, ListaHamburguesasBasicas, CirculoHamburguesa, CirculoHamburguesaImagen } from './Hamburguesas.styling';
 import ContenedorListaConPrecio from '../ContenedorListaConPrecio/ContenedorListaConPrecio.component';
 import hamburguesaCentro from '../../imgs/hamburguesaCentro.jpeg';
 import hamburguesaChickenSupreme from '../../imgs/hamburguesaChickenSupreme.jpeg';
@@ -70,7 +70,7 @@ const Hamburguesas = () => {
             <ContenedorDeTemporada>
                 <ContenedorDeTemporadaDescripcion>
                     <ContenedorNegro>
-                        <h1 style={{ paddingLeft: '20%', width: '100%' }}>De temporada...</h1>
+                        <H1DeTemporada>De temporada...</H1DeTemporada>
                         <DescripcionTemporadaP className="fontFSpecialElite">No te pierdas las Hamburguesas
                             <br /> que preparamos en cada festividad
                             <br />¡Preparadas con ingredientes o
@@ -82,7 +82,7 @@ const Hamburguesas = () => {
                 </ContenedorImagenDeTemporada>
             </ContenedorDeTemporada>
 
-            <div style={{ height: '5vh' }}></div>
+            <DivInferior />
         </>
     )
 }

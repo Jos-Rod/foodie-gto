@@ -4,15 +4,20 @@ export const DetalleAlmuerzos = styled.div`
     background-color: ${props => props.color};
     height: 50vh;
     display: flex;
-    padding-bottom: 10vh;
+    padding-bottom: 5vh;
     min-height: 375px;
-
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+
+    @media screen and (max-width: 768px) {
+        height: 10vh;
+        padding-bottom: 3vh;
+    }
 
     @media screen and (max-width: 420px) {
         height: 70vh;
         padding-bottom: 0vh;
+        flex-direction: column;
     }
 `;
 
@@ -22,6 +27,10 @@ export const SuperiorRadius = styled.div`
     height: 20vh;
     width: 100%;
     background-color: ${props => props.color};
+
+    @media screen and (max-width: 768px) {
+        height: 10vh;
+    }
 
     @media screen and (max-width: 420px) {
         height: 5vh;
@@ -35,10 +44,16 @@ export const DescripcionDesayuno = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
+
+    @media screen and (max-width: 768px) {
+        height: 90%;
+    }
 
     @media screen and (max-width: 420px) {
         width: 100%;
         height: 100%;
+        
     }
 `;
 
@@ -47,6 +62,10 @@ export const TituloDesayuno = styled.h1`
     font-size: 30pt;
     margin: 0px;
     margin-top: 20px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 20pt;
+    }
     
     @media screen and (max-width: 768px) {
         margin: 0px;
@@ -101,6 +120,7 @@ export const CuadroBlanco = styled.div`
     height: 80%;
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 
     @media screen and (max-width: 420px) {
         background-size: contain;
@@ -110,7 +130,7 @@ export const CuadroBlanco = styled.div`
 
 export const ContainerDesayunosLista = styled.div`
     width: 100%;
-    height: 80%;
+    height: 50%;
 `;
 
 export const TablaDesayunos = styled.div`
@@ -136,9 +156,13 @@ export const DescripcionDesayunoPrecio = styled.p`
 `;
 
 export const DetalleTorta = styled.div`
-    height: 35vh;
+    height: 60vh;
     display: flex;
     overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+        height: 35vh;
+    }
 
     @media screen and (max-width: 420px) {
         flex-direction: column-reverse;
@@ -174,7 +198,7 @@ export const ContenedorNegro = styled.div`
     color: white;
 
     @media screen and (max-width: 768px) {
-        height: 65%;
+        height: 60%;
     }
 
     @media screen and (max-width: 420px) {
@@ -247,6 +271,13 @@ export const H1DesayunoPhoneSize = styled.h1`
 
 export const PDesayunos = styled.p`
     display: block;
+    text-align: left;
+    /* margin-left: 5%;
+    margin-top: 10%; */
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-left: -6%;
 
     @media screen and (max-width: 420px) {
         display: none;
@@ -256,6 +287,11 @@ export const PDesayunos = styled.p`
 export const ContainerListaDesayunosParent = styled.div`
     width: 85%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 
     @media screen and (max-width: 420px) {
         display: flex;

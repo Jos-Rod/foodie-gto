@@ -80,6 +80,11 @@ export const ContenedorDeTemporada = styled.div`
     @media screen and (max-width: 768px) {
         height: 40vh;
     }
+
+    @media screen and (max-width: 420px) {
+        flex-direction: column;
+        height: 80vh;
+    }
 `;
 
 export const ContenedorDeTemporadaDescripcion = styled.div`
@@ -88,6 +93,11 @@ export const ContenedorDeTemporadaDescripcion = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media screen and (max-width: 420px) {
+        width: 100%;
+        height: 60%;
+    }
 `;
 
 export const ContenedorNegro = styled.div`
@@ -100,6 +110,10 @@ export const ContenedorNegro = styled.div`
     flex-direction: column;
     justify-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 420px) {
+        height: 100%;
+    }
 `;
 
 export const ContenedorImagenDeTemporada = styled.div`
@@ -110,6 +124,12 @@ export const ContenedorImagenDeTemporada = styled.div`
     width: 40%;
     display: block;
     background-position: center;
+
+    @media screen and (max-width: 420px) {
+        width: 100%;
+        height: 70%;
+        background-position-y: 60%;
+    }
 `;
 
 export const ContenedorImagenHamburguesa = styled.div`
@@ -134,6 +154,12 @@ export const DescripcionTemporadaP = styled.h2`
     @media screen and (max-width: 768px) {
         font-size: 15pt;
     }
+
+    @media screen and (max-width: 420px) {
+        padding-left: 0%;
+        width: 70%;
+        font-size: 17pt;
+    }
 `;
 
 export const ContenedorCualElegirias = styled.div`
@@ -143,5 +169,24 @@ export const ContenedorCualElegirias = styled.div`
 
     @media screen and (max-width: 420px) {
         flex-direction: column;
+    }
+`;
+
+export const H1DeTemporada = styled.h1`
+    padding-left: 20%;
+    width: 100%;
+
+    @media screen and (max-width: 420px) {
+        padding-left: 0%;
+        text-align: center;
+        margin-bottom: 3px;
+    }
+`;
+
+export const DivInferior = styled.div`
+    height: 5vh;
+
+    @media screen and (max-width: 420px) {
+        height: 0vh;
     }
 `;

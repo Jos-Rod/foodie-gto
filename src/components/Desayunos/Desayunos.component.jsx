@@ -41,7 +41,7 @@ const Desayunos = () => {
                     <p className="fontFSpecialElite" style={{ marginTop: '10px' }}>DISPONIBLE DESDE LAS 9 AM</p>
                     <CuadroBlanco>
                         <ContainerListaDesayunosParent>
-                            <PDesayunos className="fontFSpecialElite" style={{ textAlign: 'left', marginLeft: '5%', marginTop: '10%' }}>Desayunos</PDesayunos>
+                            <PDesayunos className="fontFSpecialElite">DESAYUNOS</PDesayunos>
                             <ContainerDesayunosLista>
                                 <ContenedorListaConPrecio lista={desayunosAlmuerzosLabel} />
                             </ContainerDesayunosLista>
