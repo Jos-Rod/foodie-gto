@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const CirculoComidaStyled = styled.div`
     height: 30vh;
-    width: 20%;
+    width: 100%;
     max-width: 200px;
     display: inline-block;
     padding: 10px;

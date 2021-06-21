@@ -53,7 +53,8 @@ function Principal({ changeTitle }) {
                     <CicrulosComidasListStyled >
                         {
                             listaComidaCirculos.map(e => {
-                                return <Link to={e.linkTo} key={e.linkTo} style={{ textDecoration: 'none', color: 'inherit' }} onClick={() => changeTitle(e.linkTo)}><CirculoComida title={e.title} img={e.img}></CirculoComida></Link>
+                                return <CirculoComida title={e.title} img={e.img} linkTo={e.linkTo} actionToChangeURL={() => changeTitle(e.linkTo)} ></CirculoComida>
+                                // return <Link to={e.linkTo} key={e.linkTo} style={{ textDecoration: 'none', color: 'inherit'}} onClick={() => changeTitle(e.linkTo)}><CirculoComida title={e.title} img={e.img}></CirculoComida></Link>
                                 // return e.title != "Especiales" ? <CirculoComida title={e.title} img={e.img}></CirculoComida> : <> <br/> <CirculoComida title={e.title} img={e.img}></CirculoComida> </>
                             })
                         }
